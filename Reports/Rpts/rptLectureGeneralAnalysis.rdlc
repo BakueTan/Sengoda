@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="soccerConnectionString">
+      <rd:DataSourceID>e96b4605-6991-4e09-85c3-400324a1ee1c</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>
+        </DataProvider>
+        <ConnectString>
+        </ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>055a1cca-5efc-456e-87b2-30782efe65c4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dsReports_StaffOverallAssessment">
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="who">
+          <DataField>who</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="when">
+          <DataField>when</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="school">
+          <DataField>school</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="lecturer">
+          <DataField>lecturer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="clas">
+          <DataField>clas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="subject">
+          <DataField>subject</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Semester">
+          <DataField>Semester</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="intake">
+          <DataField>intake</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Session">
+          <DataField>Session</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Program">
+          <DataField>Program</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="questionaire">
+          <DataField>questionaire</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="b1">
+          <DataField>b1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="b2">
+          <DataField>b2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="staffID">
+          <DataField>staffID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MiddleName">
+          <DataField>MiddleName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StaffType">
+          <DataField>StaffType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateOfBirth">
+          <DataField>DateOfBirth</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlaceOfBirth">
+          <DataField>PlaceOfBirth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IDNumber">
+          <DataField>IDNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Religion">
+          <DataField>Religion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Residential_Address">
+          <DataField>Residential Address</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Contact">
+          <DataField>Contact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Email_adrress">
+          <DataField>Email adrress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateJoinedSchool">
+          <DataField>DateJoinedSchool</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="nokname">
+          <DataField>nokname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="noksurname">
+          <DataField>noksurname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="relation">
+          <DataField>relation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nokadd">
+          <DataField>nokadd</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nokcontact">
+          <DataField>nokcontact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="image">
+          <DataField>image</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Department">
+          <DataField>Department</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>soccerConnectionString</DataSourceName>
+        <CommandText>SELECT        Questionnaire.id, Questionnaire.Year, Questionnaire.who, Questionnaire.[when], Questionnaire.school, Questionnaire.lecturer, Questionnaire.clas, 
+                         Questionnaire.subject, Questionnaire.Semester, Questionnaire.intake, Questionnaire.Session, Questionnaire.Program, sectionb.questionaire, sectionb.b1, 
+                         sectionb.b2, StaffPersonalDetails.staffID, StaffPersonalDetails.Name, StaffPersonalDetails.Surname, StaffPersonalDetails.MiddleName, 
+                         StaffPersonalDetails.StaffType, StaffPersonalDetails.DateOfBirth, StaffPersonalDetails.PlaceOfBirth, StaffPersonalDetails.IDNumber, StaffPersonalDetails.Religion, 
+                         StaffPersonalDetails.Gender, StaffPersonalDetails.[Residential Address], StaffPersonalDetails.Contact, StaffPersonalDetails.[Email adrress], 
+                         StaffPersonalDetails.DateJoinedSchool, StaffPersonalDetails.nokname, StaffPersonalDetails.noksurname, StaffPersonalDetails.relation, 
+                         StaffPersonalDetails.nokadd, StaffPersonalDetails.nokcontact, StaffPersonalDetails.image, StaffPersonalDetails.Department
+FROM            Questionnaire INNER JOIN
+                         sectionb ON Questionnaire.id = sectionb.questionaire INNER JOIN
+                         StaffPersonalDetails ON Questionnaire.lecturer = StaffPersonalDetails.staffID</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsReports</rd:DataSetName>
+        <rd:TableName>StaffOverallAssessment</rd:TableName>
+        <rd:TableAdapterName>StaffOverallAssessmentTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillAll</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>11.125in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!lecturer.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>dsReports_StaffOverallAssessment</DataSetName>
+        <ReportItems>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Width>1.375in</Width>
+            <Style>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Height>0.25in</Height>
+            <Value>Lecturer:</Value>
+          </Textbox>
+          <Textbox Name="lecturer">
+            <rd:DefaultName>lecturer</rd:DefaultName>
+            <Width>6.5in</Width>
+            <Style>
+              <Color>SlateGray</Color>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>14pt</FontSize>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.5in</Left>
+            <Height>0.27in</Height>
+            <Value>=Fields!lecturer.Value &amp; "( " &amp; fields!Name.Value &amp; "  " &amp; fields!Surname.Value &amp; " )"</Value>
+          </Textbox>
+          <List Name="List2">
+            <Sorting>
+              <SortBy>
+                <SortExpression>=Fields!intake.Value</SortExpression>
+                <Direction>Ascending</Direction>
+              </SortBy>
+            </Sorting>
+            <DataSetName>dsReports_StaffOverallAssessment</DataSetName>
+            <ReportItems>
+              <Textbox Name="textbox8">
+                <rd:DefaultName>textbox8</rd:DefaultName>
+                <Width>1.375in</Width>
+                <Style>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <ZIndex>2</ZIndex>
+                <CanGrow>true</CanGrow>
+                <Height>0.25in</Height>
+                <Value>Intake:</Value>
+              </Textbox>
+              <Textbox Name="intake">
+                <rd:DefaultName>intake</rd:DefaultName>
+                <Width>3.5in</Width>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>12pt</FontSize>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+                <ZIndex>1</ZIndex>
+                <CanGrow>true</CanGrow>
+                <Left>1.5in</Left>
+                <Height>0.24in</Height>
+                <Value>=Fields!intake.Value</Value>
+              </Textbox>
+              <List Name="List3">
+                <Sorting>
+                  <SortBy>
+                    <SortExpression>=Fields!clas.Value</SortExpression>
+                    <Direction>Ascending</Direction>
+                  </SortBy>
+                </Sorting>
+                <DataSetName>dsReports_StaffOverallAssessment</DataSetName>
+                <ReportItems>
+                  <Textbox Name="textbox9">
+                    <rd:DefaultName>textbox9</rd:DefaultName>
+                    <Width>1in</Width>
+                    <Style>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <ZIndex>3</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Height>0.25in</Height>
+                    <Value>Class:</Value>
+                  </Textbox>
+                  <Table Name="table2">
+                    <ZIndex>2</ZIndex>
+                    <DataSetName>dsReports_StaffOverallAssessment</DataSetName>
+                    <Top>0.5in</Top>
+                    <Width>5in</Width>
+                    <Details>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox4">
+                                  <Style>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <TextAlign>Left</TextAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>=Fields!b2.Value</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox5">
+                                  <Style>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <TextAlign>Left</TextAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>=count(Fields!b2.Value)</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.21in</Height>
+                        </TableRow>
+                      </TableRows>
+                      <Grouping Name="table2_Details_Group">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!b2.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Grouping>
+                    </Details>
+                    <Header>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox6">
+                                  <Style>
+                                    <Color>White</Color>
+                                    <BackgroundColor>Firebrick</BackgroundColor>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>700</FontWeight>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>Weaknesses</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox7">
+                                  <Style>
+                                    <Color>White</Color>
+                                    <BackgroundColor>Firebrick</BackgroundColor>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>700</FontWeight>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>Occurences</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.22in</Height>
+                        </TableRow>
+                      </TableRows>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </Header>
+                    <TableColumns>
+                      <TableColumn>
+                        <Width>3.75in</Width>
+                      </TableColumn>
+                      <TableColumn>
+                        <Width>1.25in</Width>
+                      </TableColumn>
+                    </TableColumns>
+                    <Height>0.43in</Height>
+                    <Left>5.75in</Left>
+                  </Table>
+                  <Textbox Name="clas">
+                    <rd:DefaultName>clas</rd:DefaultName>
+                    <Width>3.5in</Width>
+                    <Style>
+                      <FontFamily>Tahoma</FontFamily>
+                      <TextAlign>Left</TextAlign>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                    <ZIndex>1</ZIndex>
+                    <CanGrow>true</CanGrow>
+                    <Left>1.5in</Left>
+                    <Height>0.21in</Height>
+                    <Value>=Fields!clas.Value</Value>
+                  </Textbox>
+                  <Table Name="table1">
+                    <DataSetName>dsReports_StaffOverallAssessment</DataSetName>
+                    <Top>0.5in</Top>
+                    <Width>5.375in</Width>
+                    <Details>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="b1">
+                                  <rd:DefaultName>b1</rd:DefaultName>
+                                  <Style>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <TextAlign>Left</TextAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>=Fields!b1.Value</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="b2">
+                                  <rd:DefaultName>b2</rd:DefaultName>
+                                  <Style>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <TextAlign>Left</TextAlign>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>=count(Fields!b1.Value)</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.21in</Height>
+                        </TableRow>
+                      </TableRows>
+                      <Grouping Name="table1_Details_Group">
+                        <GroupExpressions>
+                          <GroupExpression>=Fields!b1.Value</GroupExpression>
+                        </GroupExpressions>
+                      </Grouping>
+                    </Details>
+                    <Header>
+                      <TableRows>
+                        <TableRow>
+                          <TableCells>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox2">
+                                  <rd:DefaultName>textbox2</rd:DefaultName>
+                                  <Style>
+                                    <Color>White</Color>
+                                    <BackgroundColor>Firebrick</BackgroundColor>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>700</FontWeight>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>Strengths</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                            <TableCell>
+                              <ReportItems>
+                                <Textbox Name="textbox3">
+                                  <rd:DefaultName>textbox3</rd:DefaultName>
+                                  <Style>
+                                    <Color>White</Color>
+                                    <BackgroundColor>Firebrick</BackgroundColor>
+                                    <BorderColor>
+                                      <Default>LightGrey</Default>
+                                    </BorderColor>
+                                    <BorderStyle>
+                                      <Default>Solid</Default>
+                                    </BorderStyle>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>700</FontWeight>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                  <CanGrow>true</CanGrow>
+                                  <Value>Occurences</Value>
+                                </Textbox>
+                              </ReportItems>
+                            </TableCell>
+                          </TableCells>
+                          <Height>0.22in</Height>
+                        </TableRow>
+                      </TableRows>
+                      <RepeatOnNewPage>true</RepeatOnNewPage>
+                    </Header>
+                    <TableColumns>
+                      <TableColumn>
+                        <Width>4in</Width>
+                      </TableColumn>
+                      <TableColumn>
+                        <Width>1.375in</Width>
+                      </TableColumn>
+                    </TableColumns>
+                    <Height>0.43in</Height>
+                  </Table>
+                </ReportItems>
+                <Top>0.5in</Top>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                </Style>
+                <Grouping Name="list1_clas">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!clas.Value</GroupExpression>
+                  </GroupExpressions>
+                  <PageBreakAtEnd>true</PageBreakAtEnd>
+                </Grouping>
+              </List>
+            </ReportItems>
+            <Top>0.5in</Top>
+            <Width>10.875in</Width>
+            <Style>
+              <FontFamily>Tahoma</FontFamily>
+              <FontSize>12pt</FontSize>
+            </Style>
+            <Grouping Name="list1_intake">
+              <GroupExpressions>
+                <GroupExpression>=Fields!intake.Value</GroupExpression>
+              </GroupExpressions>
+              <PageBreakAtEnd>true</PageBreakAtEnd>
+            </Grouping>
+            <Height>1.75in</Height>
+          </List>
+        </ReportItems>
+        <Top>0.36in</Top>
+        <Width>11in</Width>
+        <Style>
+          <Color>SlateGray</Color>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+        </Style>
+        <Grouping Name="list1_lecturer">
+          <GroupExpressions>
+            <GroupExpression>=Fields!lecturer.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Height>2.515in</Height>
+      </List>
+    </ReportItems>
+    <Height>3in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

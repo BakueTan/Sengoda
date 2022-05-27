@@ -1,0 +1,1420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStudentSearches" targetNamespace="http://tempuri.org/dsStudentSearches.xsd" xmlns:mstns="http://tempuri.org/dsStudentSearches.xsd" xmlns="http://tempuri.org/dsStudentSearches.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="soccerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="soccerConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Miscelleneous.My.MySettings.GlobalReference.Default.soccerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentPersonalDetailsTableAdapter" GeneratorDataComponentClassName="StudentPersonalDetailsTableAdapter" Name="StudentPersonalDetails" UserDataComponentName="StudentPersonalDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.Year, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname, 
+                         StudentPersonalDetails.StudentMiddleName, StudentPersonalDetails.DateOfBirth, StudentPersonalDetails.BirthCetificateNumber, StudentPersonalDetails.Gender, 
+                         StudentPersonalDetails.PlaceOfBirth, StudentPersonalDetails.NationalID, StudentPersonalDetails.Religion, StudentPersonalDetails.[Residential Adress], 
+                         StudentPersonalDetails.[Contact Number], StudentPersonalDetails.EmailAddress, StudentPersonalDetails.NokName, StudentPersonalDetails.NOKSurname, 
+                         StudentPersonalDetails.NOKAddress, StudentPersonalDetails.NOKContactNumber, StudentPersonalDetails.Relationship, StudentPersonalDetails.Status, 
+                         StudentPersonalDetails.Image, StudentPersonalDetails.AccountNumber, StudentPersonalDetails.Session, StudentPersonalDetails.Program, 
+                         StudentPersonalDetails.Semester, enrollment.[Date Joined] AS [Year Joined  joined]
+FROM            StudentPersonalDetails INNER JOIN
+                         enrollment ON StudentPersonalDetails.StudentID = enrollment.StudentID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StudentID" DataSetColumn="StudentID" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="StudentName" DataSetColumn="StudentName" />
+              <Mapping SourceColumn="StudentSurname" DataSetColumn="StudentSurname" />
+              <Mapping SourceColumn="StudentMiddleName" DataSetColumn="StudentMiddleName" />
+              <Mapping SourceColumn="DateOfBirth" DataSetColumn="DateOfBirth" />
+              <Mapping SourceColumn="BirthCetificateNumber" DataSetColumn="BirthCetificateNumber" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="PlaceOfBirth" DataSetColumn="PlaceOfBirth" />
+              <Mapping SourceColumn="NationalID" DataSetColumn="NationalID" />
+              <Mapping SourceColumn="Religion" DataSetColumn="Religion" />
+              <Mapping SourceColumn="Residential Adress" DataSetColumn="Residential Adress" />
+              <Mapping SourceColumn="Contact Number" DataSetColumn="Contact Number" />
+              <Mapping SourceColumn="EmailAddress" DataSetColumn="EmailAddress" />
+              <Mapping SourceColumn="NokName" DataSetColumn="NokName" />
+              <Mapping SourceColumn="NOKSurname" DataSetColumn="NOKSurname" />
+              <Mapping SourceColumn="NOKAddress" DataSetColumn="NOKAddress" />
+              <Mapping SourceColumn="NOKContactNumber" DataSetColumn="NOKContactNumber" />
+              <Mapping SourceColumn="Relationship" DataSetColumn="Relationship" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="Image" DataSetColumn="Image" />
+              <Mapping SourceColumn="Year Joined  joined" DataSetColumn="Year Joined  joined" />
+              <Mapping SourceColumn="AccountNumber" DataSetColumn="AccountNumber" />
+              <Mapping SourceColumn="Session" DataSetColumn="Session" />
+              <Mapping SourceColumn="Program" DataSetColumn="Program" />
+              <Mapping SourceColumn="Semester" DataSetColumn="Semester" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByClass" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByClass" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByClass">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentPersonalDetails.AccountNumber, StudentPersonalDetails.BirthCetificateNumber, StudentPersonalDetails.[Contact Number], 
+                         StudentPersonalDetails.DateOfBirth, StudentPersonalDetails.EmailAddress, StudentPersonalDetails.Gender, StudentPersonalDetails.Image, 
+                         StudentPersonalDetails.NOKAddress, StudentPersonalDetails.NOKContactNumber, StudentPersonalDetails.NOKSurname, StudentPersonalDetails.NationalID, 
+                         StudentPersonalDetails.NokName, StudentPersonalDetails.PlaceOfBirth, StudentPersonalDetails.Program, StudentPersonalDetails.Relationship, 
+                         StudentPersonalDetails.Religion, StudentPersonalDetails.[Residential Adress], StudentPersonalDetails.Semester, StudentPersonalDetails.Session, 
+                         StudentPersonalDetails.Status, StudentPersonalDetails.StudentID, StudentPersonalDetails.StudentMiddleName, StudentPersonalDetails.StudentName, 
+                         StudentPersonalDetails.StudentSurname, StudentPersonalDetails.Year, enrollment.[Date Joined] AS [Year Joined  joined]
+FROM            StudentPersonalDetails INNER JOIN
+                         enrollment ON StudentPersonalDetails.StudentID = enrollment.StudentID
+WHERE        (enrollment.[Date Joined] = @year)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="year" ColumnName="Date Joined" DataSourceName="soccer.dbo.enrollment" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@year" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year Joined  joined" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByClasSub" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillByClasSub" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillByClasSub">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname, StudentPersonalDetails.StudentMiddleName, 
+                         StudentPersonalDetails.DateOfBirth, StudentPersonalDetails.BirthCetificateNumber, StudentPersonalDetails.PlaceOfBirth, StudentPersonalDetails.NationalID, 
+                         StudentPersonalDetails.Religion, StudentPersonalDetails.[Residential Adress], StudentPersonalDetails.[Contact Number], StudentPersonalDetails.EmailAddress, 
+                         StudentPersonalDetails.NokName, StudentPersonalDetails.NOKSurname, StudentPersonalDetails.NOKAddress, StudentPersonalDetails.NOKContactNumber, 
+                         StudentPersonalDetails.Relationship, StudentPersonalDetails.Image, StudentPersonalDetails.AccountNumber, enrollment.[Date Joined] AS [Year Joined  joined], 
+                         enrollment.Program, enrollment.Year, enrollment.Semester, enrollment.Session, enrollment.Intake AS Status, enrollment.Gender
+FROM            StudentPersonalDetails INNER JOIN
+                         enrollment ON StudentPersonalDetails.StudentID = enrollment.StudentID
+WHERE        (enrollment.Program = @prog) AND (enrollment.[Date Joined] = @class) AND (enrollment.Year = @year) AND (enrollment.Semester = @sem) AND 
+                         (enrollment.Intake = @intake) AND (enrollment.Session = @ses) and enrollment.status &lt;&gt; 'Transferred'</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="prog" ColumnName="Program" DataSourceName="school.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@prog" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="class" ColumnName="Date Joined" DataSourceName="school.dbo.enrollment" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@class" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year Joined  joined" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="year" ColumnName="Year" DataSourceName="school.dbo.enrollment" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@year" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="sem" ColumnName="Semester" DataSourceName="school.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sem" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="intake" ColumnName="Intake" DataSourceName="school.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@intake" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="ses" ColumnName="Session" DataSourceName="school.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ses" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStud" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillByStud" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillByStud">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.Year, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname, 
+                         StudentPersonalDetails.StudentMiddleName, StudentPersonalDetails.DateOfBirth, StudentPersonalDetails.BirthCetificateNumber, StudentPersonalDetails.Gender, 
+                         StudentPersonalDetails.PlaceOfBirth, StudentPersonalDetails.NationalID, StudentPersonalDetails.Religion, StudentPersonalDetails.[Residential Adress], 
+                         StudentPersonalDetails.[Contact Number], StudentPersonalDetails.EmailAddress, StudentPersonalDetails.NokName, StudentPersonalDetails.NOKSurname, 
+                         StudentPersonalDetails.NOKAddress, StudentPersonalDetails.NOKContactNumber, StudentPersonalDetails.Relationship, StudentPersonalDetails.Status, 
+                         StudentPersonalDetails.Image, StudentPersonalDetails.AccountNumber, StudentPersonalDetails.Session, StudentPersonalDetails.Program, 
+                         StudentPersonalDetails.Semester, enrollment.[Date Joined] AS [Year Joined  joined]
+FROM            StudentPersonalDetails INNER JOIN
+                         enrollment ON StudentPersonalDetails.StudentID = enrollment.StudentID and enrollment.year = studentpersonaldetails.year and enrollment.semester = studentpersonaldetails.semester and enrollment.[Date Joined] = studentpersonaldetails.[year joined  joined]
+WHERE        (StudentPersonalDetails.StudentID = @stud)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="stud" ColumnName="StudentID" DataSourceName="school.dbo.StudentPersonalDetails" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@stud" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StudentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProgramsTableAdapter" GeneratorDataComponentClassName="ProgramsTableAdapter" Name="Programs" UserDataComponentName="ProgramsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.forms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [forms] WHERE (((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Semesters = 1 AND [Semesters] IS NULL) OR ([Semesters] = @Original_Semesters)) AND ([Forms] = @Original_Forms) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_Section = 1 AND [Section] IS NULL) OR ([Section] = @Original_Section)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Section" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [forms] ([Year], [Semesters], [Forms], [Type], [Section]) VALUES (@Year, @Semesters, @Forms, @Type, @Section)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Forms + '- ' + Description AS Description, Year, Semesters, Forms, Type, Section
+FROM            forms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [forms] SET [Year] = @Year, [Semesters] = @Semesters, [Forms] = @Forms, [Type] = @Type, [Section] = @Section WHERE (((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Semesters = 1 AND [Semesters] IS NULL) OR ([Semesters] = @Original_Semesters)) AND ([Forms] = @Original_Forms) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_Section = 1 AND [Section] IS NULL) OR ([Section] = @Original_Section)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Section" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Forms" DataSetColumn="Forms" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Semesters" DataSetColumn="Semesters" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="Section" DataSetColumn="Section" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SemesterDurationsTableAdapter" GeneratorDataComponentClassName="SemesterDurationsTableAdapter" Name="SemesterDurations" UserDataComponentName="SemesterDurationsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.SemesterDurations" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [SemesterDurations] WHERE (([Year] = @Original_Year) AND ([Semester] = @Original_Semester) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([Program] = @Original_Program) AND ((@IsNull_Fees = 1 AND [Fees] IS NULL) OR ([Fees] = @Original_Fees)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semester" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fees" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Fees" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [SemesterDurations] ([Year], [Semester], [StartDate], [EndDate], [Program], [Fees]) VALUES (@Year, @Semester, @StartDate, @EndDate, @Program, @Fees);
+SELECT Year, Semester, StartDate, EndDate, Program, Fees FROM SemesterDurations WHERE (Program = @Program) AND (Semester = @Semester) AND (Year = @Year)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semester" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Fees" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     Year, Semester, StartDate, EndDate, Program, Fees
+FROM         SemesterDurations</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [SemesterDurations] SET [Year] = @Year, [Semester] = @Semester, [StartDate] = @StartDate, [EndDate] = @EndDate, [Program] = @Program, [Fees] = @Fees WHERE (([Year] = @Original_Year) AND ([Semester] = @Original_Semester) AND ((@IsNull_StartDate = 1 AND [StartDate] IS NULL) OR ([StartDate] = @Original_StartDate)) AND ((@IsNull_EndDate = 1 AND [EndDate] IS NULL) OR ([EndDate] = @Original_EndDate)) AND ([Program] = @Original_Program) AND ((@IsNull_Fees = 1 AND [Fees] IS NULL) OR ([Fees] = @Original_Fees)));
+SELECT Year, Semester, StartDate, EndDate, Program, Fees FROM SemesterDurations WHERE (Program = @Program) AND (Semester = @Semester) AND (Year = @Year)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semester" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Fees" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semester" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StartDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_StartDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="StartDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_EndDate" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_EndDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="EndDate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Program" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Fees" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_Fees" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="Fees" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Semester" DataSetColumn="Semester" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="Program" DataSetColumn="Program" />
+              <Mapping SourceColumn="Fees" DataSetColumn="Fees" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SMSAccTableAdapter" GeneratorDataComponentClassName="SMSAccTableAdapter" Name="SMSAcc" UserDataComponentName="SMSAccTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.SMSAcc" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [SMSAcc] WHERE (([UserName] = @Original_UserName) AND ([Password] = @Original_Password))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [SMSAcc] ([UserName], [Password]) VALUES (@UserName, @Password);
+SELECT UserName, Password FROM SMSAcc WHERE (Password = @Password) AND (UserName = @UserName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     UserName, Password
+FROM         SMSAcc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [SMSAcc] SET [UserName] = @UserName, [Password] = @Password WHERE (([UserName] = @Original_UserName) AND ([Password] = @Original_Password));
+SELECT UserName, Password FROM SMSAcc WHERE (Password = @Password) AND (UserName = @UserName)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
+              <Mapping SourceColumn="Password" DataSetColumn="Password" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudentFullNameTableAdapter" GeneratorDataComponentClassName="StudentFullNameTableAdapter" Name="StudentFullName" UserDataComponentName="StudentFullNameTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.StudentPersonalDetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [StudentPersonalDetails] WHERE (([StudentID] = @Original_StudentID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StudentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StudentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     StudentName + ' ' + StudentSurname AS FullName, StudentID
+FROM         StudentPersonalDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [StudentPersonalDetails] SET [StudentID] = @StudentID WHERE (([StudentID] = @Original_StudentID));
+SELECT StudentName + ' ' + StudentSurname AS FullName, StudentID FROM StudentPersonalDetails WHERE (StudentID = @StudentID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@StudentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StudentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StudentID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StudentID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="StudentID" DataSetColumn="StudentID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SubjectsTableAdapter" GeneratorDataComponentClassName="SubjectsTableAdapter" Name="Subjects" UserDataComponentName="SubjectsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.Subjects" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Subjects] WHERE (([SubjectID] = @Original_SubjectID))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SubjectID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubjectID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Subjects] ([SubjectID]) VALUES (@SubjectID);
+SELECT SubjectID + '-' + Subject AS Subject, SubjectID FROM Subjects WHERE (SubjectID = @SubjectID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SubjectID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubjectID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     SubjectID + '-' + Subject AS Subject, SubjectID
+FROM         Subjects</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Subjects] SET [SubjectID] = @SubjectID WHERE (([SubjectID] = @Original_SubjectID));
+SELECT SubjectID + '-' + Subject AS Subject, SubjectID FROM Subjects WHERE (SubjectID = @SubjectID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SubjectID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubjectID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SubjectID" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SubjectID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
+              <Mapping SourceColumn="SubjectID" DataSetColumn="SubjectID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.Subjects" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByID" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillByID" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillByID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT SubjectID + '-' + Subject AS Subject, SubjectID FROM Subjects WHERE (SubjectID = @ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="ID" ColumnName="SubjectID" DataSourceName="soccer.dbo.Subjects" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@ID" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SubjectID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="enrollmentTableAdapter" GeneratorDataComponentClassName="enrollmentTableAdapter" Name="enrollment" UserDataComponentName="enrollmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillbyClass" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillbyClass" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillbyClass">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        enrollment.StudentID, enrollment.Gender, enrollment.Program, enrollment.Year, enrollment.Semester, enrollment.[Date Joined], enrollment.Session, 
+                         enrollment.Intake, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname
+FROM            enrollment INNER JOIN
+                         StudentPersonalDetails ON enrollment.StudentID = StudentPersonalDetails.StudentID
+WHERE        (enrollment.Program = @prog) AND (enrollment.[Date Joined] = @enrol) AND (enrollment.Year = @year) AND (enrollment.Semester = @sem) AND 
+                         (enrollment.Session = @session) AND (enrollment.Intake = @intake)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="prog" ColumnName="Program" DataSourceName="soccer.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@prog" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Program" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="enrol" ColumnName="Date Joined" DataSourceName="soccer.dbo.enrollment" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@enrol" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Date Joined" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="year" ColumnName="Year" DataSourceName="soccer.dbo.enrollment" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@year" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="sem" ColumnName="Semester" DataSourceName="soccer.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@sem" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Semester" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="session" ColumnName="Session" DataSourceName="soccer.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@session" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="intake" ColumnName="Intake" DataSourceName="soccer.dbo.enrollment" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@intake" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Intake" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StudentID" DataSetColumn="StudentID" />
+              <Mapping SourceColumn="Gender" DataSetColumn="Gender" />
+              <Mapping SourceColumn="Program" DataSetColumn="Program" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Semester" DataSetColumn="Semester" />
+              <Mapping SourceColumn="Date Joined" DataSetColumn="Date Joined" />
+              <Mapping SourceColumn="Session" DataSetColumn="Session" />
+              <Mapping SourceColumn="Intake" DataSetColumn="Intake" />
+              <Mapping SourceColumn="StudentName" DataSetColumn="StudentName" />
+              <Mapping SourceColumn="StudentSurname" DataSetColumn="StudentSurname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="formsTableAdapter" GeneratorDataComponentClassName="formsTableAdapter" Name="forms" UserDataComponentName="formsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="school.dbo.forms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [forms] WHERE (([Forms] = @Original_Forms) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Semesters = 1 AND [Semesters] IS NULL) OR ([Semesters] = @Original_Semesters)) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_Section = 1 AND [Section] IS NULL) OR ([Section] = @Original_Section)) AND ((@IsNull_ProgSufix = 1 AND [ProgSufix] IS NULL) OR ([ProgSufix] = @Original_ProgSufix)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Section" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProgSufix" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ProgSufix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [forms] ([Forms], [Description], [Year], [Semesters], [Type], [Section], [ProgSufix]) VALUES (@Forms, @Description, @Year, @Semesters, @Type, @Section, @ProgSufix)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ProgSufix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Forms, Description, Year, Semesters, Type, Section, ProgSufix
+FROM            forms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [forms] SET [Forms] = @Forms, [Description] = @Description, [Year] = @Year, [Semesters] = @Semesters, [Type] = @Type, [Section] = @Section, [ProgSufix] = @ProgSufix WHERE (([Forms] = @Original_Forms) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Year = 1 AND [Year] IS NULL) OR ([Year] = @Original_Year)) AND ((@IsNull_Semesters = 1 AND [Semesters] IS NULL) OR ([Semesters] = @Original_Semesters)) AND ((@IsNull_Type = 1 AND [Type] IS NULL) OR ([Type] = @Original_Type)) AND ((@IsNull_Section = 1 AND [Section] IS NULL) OR ([Section] = @Original_Section)) AND ((@IsNull_ProgSufix = 1 AND [ProgSufix] IS NULL) OR ([ProgSufix] = @Original_ProgSufix)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ProgSufix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Year" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Semesters" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Semesters" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Type" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Type" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Section" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Section" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Section" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ProgSufix" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_ProgSufix" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ProgSufix" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Forms" DataSetColumn="Forms" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Year" DataSetColumn="Year" />
+              <Mapping SourceColumn="Semesters" DataSetColumn="Semesters" />
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+              <Mapping SourceColumn="Section" DataSetColumn="Section" />
+              <Mapping SourceColumn="ProgSufix" DataSetColumn="ProgSufix" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="StudsBySectionTableAdapter" GeneratorDataComponentClassName="StudsBySectionTableAdapter" Name="StudsBySection" UserDataComponentName="StudsBySectionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.StudentName + ' ' + StudentPersonalDetails.StudentSurname AS FullName, forms.Section
+FROM            StudentPersonalDetails INNER JOIN
+                         forms ON StudentPersonalDetails.Program = forms.Forms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StudentID" DataSetColumn="StudentID" />
+              <Mapping SourceColumn="FullName" DataSetColumn="FullName" />
+              <Mapping SourceColumn="Section" DataSetColumn="Section" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentPeriodsTableAdapter" GeneratorDataComponentClassName="PaymentPeriodsTableAdapter" Name="PaymentPeriods" UserDataComponentName="PaymentPeriodsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="Gevstein.dbo.PaymentPeriods" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [PaymentPeriods] WHERE (([Period] = @Original_Period) AND ((@IsNull_Current = 1 AND [Current] IS NULL) OR ([Current] = @Original_Current)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Current" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [PaymentPeriods] ([Period], [Current]) VALUES (@Period, @Current);
+SELECT Period, CAST(Period AS nvarchar) + '-' + Description AS Description, [Current] FROM PaymentPeriods WHERE (Period = @Period)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Period, CAST(Period AS nvarchar) + '-' + Description AS Description, [Current]
+FROM            PaymentPeriods</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [PaymentPeriods] SET [Period] = @Period, [Current] = @Current WHERE (([Period] = @Original_Period) AND ((@IsNull_Current = 1 AND [Current] IS NULL) OR ([Current] = @Original_Current)));
+SELECT Period, CAST(Period AS nvarchar) + '-' + Description AS Description, [Current] FROM PaymentPeriods WHERE (Period = @Period)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Current" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Current" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Period" DataSetColumn="Period" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Current" DataSetColumn="Current" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentPeriods1TableAdapter" GeneratorDataComponentClassName="PaymentPeriods1TableAdapter" Name="PaymentPeriods1" UserDataComponentName="PaymentPeriods1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="school.dbo.PaymentPeriods" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [PaymentPeriods] WHERE (([Period] = @Original_Period) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_current = 1 AND [current] IS NULL) OR ([current] = @Original_current)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_current" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [PaymentPeriods] ([Period], [Description], [current]) VALUES (@Period, @Description, @current);
+SELECT Period, Description, [current] FROM PaymentPeriods WHERE (Period = @Period)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Period, Description, [current]
+FROM            PaymentPeriods</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [PaymentPeriods] SET [Period] = @Period, [Description] = @Description, [current] = @current WHERE (([Period] = @Original_Period) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_current = 1 AND [current] IS NULL) OR ([current] = @Original_current)));
+SELECT Period, Description, [current] FROM PaymentPeriods WHERE (Period = @Period)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Period" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Period" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Description" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_current" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_current" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="current" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Period" DataSetColumn="Period" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="current" DataSetColumn="current" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="forms1TableAdapter" GeneratorDataComponentClassName="forms1TableAdapter" Name="forms1" UserDataComponentName="forms1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="soccer.dbo.forms" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [forms] WHERE (([Forms] = @Original_Forms))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [forms] ([Forms]) VALUES (@Forms);
+SELECT Forms, Forms + '- ' + Description AS Description FROM forms WHERE (Forms = @Forms)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Forms, Forms + '- ' + Description AS Description
+FROM            forms</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [forms] SET [Forms] = @Forms WHERE (([Forms] = @Original_Forms));
+SELECT Forms, Forms + '- ' + Description AS Description FROM forms WHERE (Forms = @Forms)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Forms" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Forms" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Forms" DataSetColumn="Forms" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CurrentSubjectsTableAdapter" GeneratorDataComponentClassName="CurrentSubjectsTableAdapter" Name="CurrentSubjects" UserDataComponentName="CurrentSubjectsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByStud" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillByStud" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillByStud">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     StudentPersonalDetails.StudentID, StudentSubjects.SubjectID, StudentSubjects.SubjectID + '-' + Subjects.Subject AS Subject
+FROM         StudentPersonalDetails INNER JOIN
+                      StudentSubjects ON StudentPersonalDetails.StudentID = StudentSubjects.StudentID AND 
+                      StudentPersonalDetails.Program = StudentSubjects.Program AND StudentPersonalDetails.Year = StudentSubjects.Year AND 
+                      StudentPersonalDetails.Semester = StudentSubjects.Semester INNER JOIN
+                      Subjects ON StudentSubjects.SubjectID = Subjects.SubjectID
+WHERE     (StudentPersonalDetails.StudentID = @stud)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="stud" ColumnName="StudentID" DataSourceName="soccer.dbo.StudentPersonalDetails" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@stud" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StudentID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StudentID" DataSetColumn="StudentID" />
+              <Mapping SourceColumn="SubjectID" DataSetColumn="SubjectID" />
+              <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PaymentTypeTableAdapter" GeneratorDataComponentClassName="PaymentTypeTableAdapter" Name="PaymentType" UserDataComponentName="PaymentTypeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="school.dbo.PaymentType" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT Type
+FROM            PaymentType</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Type" DataSetColumn="Type" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="schoolsessionsTableAdapter" GeneratorDataComponentClassName="schoolsessionsTableAdapter" Name="schoolsessions" UserDataComponentName="schoolsessionsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="school.dbo.schoolsessions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [schoolsessions] WHERE (([Session] = @Original_Session))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [schoolsessions] ([Session]) VALUES (@Session);
+SELECT Session FROM schoolsessions WHERE (Session = @Session)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Session
+FROM            schoolsessions</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [schoolsessions] SET [Session] = @Session WHERE (([Session] = @Original_Session));
+SELECT Session FROM schoolsessions WHERE (Session = @Session)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Session" DataSetColumn="Session" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="schoolsessions1TableAdapter" GeneratorDataComponentClassName="schoolsessions1TableAdapter" Name="schoolsessions1" UserDataComponentName="schoolsessions1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="soccerConnectionString (MySettings)" DbObjectName="school.dbo.schoolsessions" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [schoolsessions] WHERE (([Session] = @Original_Session))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [schoolsessions] ([Session]) VALUES (@Session);
+SELECT Session FROM schoolsessions WHERE (Session = @Session)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        Session
+FROM            schoolsessions</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [schoolsessions] SET [Session] = @Session WHERE (([Session] = @Original_Session));
+SELECT Session FROM schoolsessions WHERE (Session = @Session)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Session" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Session" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Session" DataSetColumn="Session" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStudentSearches" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:EnforceConstraints="False" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="dsStudentSearches" msprop:Generator_UserDSName="dsStudentSearches">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StudentPersonalDetails" msprop:Generator_UserTableName="StudentPersonalDetails" msprop:Generator_RowEvArgName="StudentPersonalDetailsRowChangeEvent" msprop:Generator_TableVarName="tableStudentPersonalDetails" msprop:Generator_TablePropName="StudentPersonalDetails" msprop:Generator_RowDeletingName="StudentPersonalDetailsRowDeleting" msprop:Generator_RowChangingName="StudentPersonalDetailsRowChanging" msprop:Generator_RowDeletedName="StudentPersonalDetailsRowDeleted" msprop:Generator_RowEvHandlerName="StudentPersonalDetailsRowChangeEventHandler" msprop:Generator_TableClassName="StudentPersonalDetailsDataTable" msprop:Generator_RowChangedName="StudentPersonalDetailsRowChanged" msprop:Generator_RowClassName="StudentPersonalDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StudentID" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" />
+              <xs:element name="StudentName" msprop:Generator_ColumnVarNameInTable="columnStudentName" msprop:Generator_ColumnPropNameInRow="StudentName" msprop:Generator_ColumnPropNameInTable="StudentNameColumn" msprop:Generator_UserColumnName="StudentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentSurname" msprop:Generator_ColumnVarNameInTable="columnStudentSurname" msprop:Generator_ColumnPropNameInRow="StudentSurname" msprop:Generator_ColumnPropNameInTable="StudentSurnameColumn" msprop:Generator_UserColumnName="StudentSurname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentMiddleName" msprop:Generator_ColumnVarNameInTable="columnStudentMiddleName" msprop:Generator_ColumnPropNameInRow="StudentMiddleName" msprop:Generator_ColumnPropNameInTable="StudentMiddleNameColumn" msprop:Generator_UserColumnName="StudentMiddleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DateOfBirth" msprop:Generator_ColumnVarNameInTable="columnDateOfBirth" msprop:Generator_ColumnPropNameInRow="DateOfBirth" msprop:Generator_ColumnPropNameInTable="DateOfBirthColumn" msprop:Generator_UserColumnName="DateOfBirth" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BirthCetificateNumber" msprop:Generator_ColumnVarNameInTable="columnBirthCetificateNumber" msprop:Generator_ColumnPropNameInRow="BirthCetificateNumber" msprop:Generator_ColumnPropNameInTable="BirthCetificateNumberColumn" msprop:Generator_UserColumnName="BirthCetificateNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PlaceOfBirth" msprop:Generator_ColumnVarNameInTable="columnPlaceOfBirth" msprop:Generator_ColumnPropNameInRow="PlaceOfBirth" msprop:Generator_ColumnPropNameInTable="PlaceOfBirthColumn" msprop:Generator_UserColumnName="PlaceOfBirth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NationalID" msprop:Generator_ColumnVarNameInTable="columnNationalID" msprop:Generator_ColumnPropNameInRow="NationalID" msprop:Generator_ColumnPropNameInTable="NationalIDColumn" msprop:Generator_UserColumnName="NationalID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Religion" msprop:Generator_ColumnVarNameInTable="columnReligion" msprop:Generator_ColumnPropNameInRow="Religion" msprop:Generator_ColumnPropNameInTable="ReligionColumn" msprop:Generator_UserColumnName="Religion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Residential_x0020_Adress" msprop:Generator_ColumnVarNameInTable="columnResidential_Adress" msprop:Generator_ColumnPropNameInRow="Residential_Adress" msprop:Generator_ColumnPropNameInTable="Residential_AdressColumn" msprop:Generator_UserColumnName="Residential Adress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Contact_x0020_Number" msprop:Generator_ColumnVarNameInTable="columnContact_Number" msprop:Generator_ColumnPropNameInRow="Contact_Number" msprop:Generator_ColumnPropNameInTable="Contact_NumberColumn" msprop:Generator_UserColumnName="Contact Number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmailAddress" msprop:Generator_ColumnVarNameInTable="columnEmailAddress" msprop:Generator_ColumnPropNameInRow="EmailAddress" msprop:Generator_ColumnPropNameInTable="EmailAddressColumn" msprop:Generator_UserColumnName="EmailAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NokName" msprop:Generator_ColumnVarNameInTable="columnNokName" msprop:Generator_ColumnPropNameInRow="NokName" msprop:Generator_ColumnPropNameInTable="NokNameColumn" msprop:Generator_UserColumnName="NokName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOKSurname" msprop:Generator_ColumnVarNameInTable="columnNOKSurname" msprop:Generator_ColumnPropNameInRow="NOKSurname" msprop:Generator_ColumnPropNameInTable="NOKSurnameColumn" msprop:Generator_UserColumnName="NOKSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOKAddress" msprop:Generator_ColumnVarNameInTable="columnNOKAddress" msprop:Generator_ColumnPropNameInRow="NOKAddress" msprop:Generator_ColumnPropNameInTable="NOKAddressColumn" msprop:Generator_UserColumnName="NOKAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOKContactNumber" msprop:Generator_ColumnVarNameInTable="columnNOKContactNumber" msprop:Generator_ColumnPropNameInRow="NOKContactNumber" msprop:Generator_ColumnPropNameInTable="NOKContactNumberColumn" msprop:Generator_UserColumnName="NOKContactNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Relationship" msprop:Generator_ColumnVarNameInTable="columnRelationship" msprop:Generator_ColumnPropNameInRow="Relationship" msprop:Generator_ColumnPropNameInTable="RelationshipColumn" msprop:Generator_UserColumnName="Relationship" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Image" msprop:Generator_ColumnVarNameInTable="columnImage" msprop:Generator_ColumnPropNameInRow="Image" msprop:Generator_ColumnPropNameInTable="ImageColumn" msprop:Generator_UserColumnName="Image" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Year_x0020_Joined_x0020__x0020_joined" msprop:Generator_ColumnVarNameInTable="columnYear_Joined__joined" msprop:Generator_ColumnPropNameInRow="Year_Joined__joined" msprop:Generator_ColumnPropNameInTable="Year_Joined__joinedColumn" msprop:Generator_UserColumnName="Year Joined  joined" type="xs:int" />
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Session" msprop:Generator_ColumnVarNameInTable="columnSession" msprop:Generator_ColumnPropNameInRow="Session" msprop:Generator_ColumnPropNameInTable="SessionColumn" msprop:Generator_UserColumnName="Session" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Program" msprop:Generator_ColumnVarNameInTable="columnProgram" msprop:Generator_ColumnPropNameInRow="Program" msprop:Generator_ColumnPropNameInTable="ProgramColumn" msprop:Generator_UserColumnName="Program">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_UserColumnName="Semester" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Programs" msprop:Generator_UserTableName="Programs" msprop:Generator_RowEvArgName="ProgramsRowChangeEvent" msprop:Generator_TableVarName="tablePrograms" msprop:Generator_TablePropName="Programs" msprop:Generator_RowDeletingName="ProgramsRowDeleting" msprop:Generator_RowChangingName="ProgramsRowChanging" msprop:Generator_RowDeletedName="ProgramsRowDeleted" msprop:Generator_RowEvHandlerName="ProgramsRowChangeEventHandler" msprop:Generator_TableClassName="ProgramsDataTable" msprop:Generator_RowChangedName="ProgramsRowChanged" msprop:Generator_RowClassName="ProgramsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Forms" msprop:Generator_ColumnVarNameInTable="columnForms" msprop:Generator_ColumnPropNameInRow="Forms" msprop:Generator_ColumnPropNameInTable="FormsColumn" msprop:Generator_UserColumnName="Forms">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Semesters" msprop:Generator_ColumnVarNameInTable="columnSemesters" msprop:Generator_ColumnPropNameInRow="Semesters" msprop:Generator_ColumnPropNameInTable="SemestersColumn" msprop:Generator_UserColumnName="Semesters" type="xs:int" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SemesterDurations" msprop:Generator_UserTableName="SemesterDurations" msprop:Generator_RowEvArgName="SemesterDurationsRowChangeEvent" msprop:Generator_TableVarName="tableSemesterDurations" msprop:Generator_TablePropName="SemesterDurations" msprop:Generator_RowDeletingName="SemesterDurationsRowDeleting" msprop:Generator_RowChangingName="SemesterDurationsRowChanging" msprop:Generator_RowDeletedName="SemesterDurationsRowDeleted" msprop:Generator_RowEvHandlerName="SemesterDurationsRowChangeEventHandler" msprop:Generator_TableClassName="SemesterDurationsDataTable" msprop:Generator_RowChangedName="SemesterDurationsRowChanged" msprop:Generator_RowClassName="SemesterDurationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" />
+              <xs:element name="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_UserColumnName="Semester" type="xs:int" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Program" msprop:Generator_ColumnVarNameInTable="columnProgram" msprop:Generator_ColumnPropNameInRow="Program" msprop:Generator_ColumnPropNameInTable="ProgramColumn" msprop:Generator_UserColumnName="Program">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fees" msprop:Generator_ColumnVarNameInTable="columnFees" msprop:Generator_ColumnPropNameInRow="Fees" msprop:Generator_ColumnPropNameInTable="FeesColumn" msprop:Generator_UserColumnName="Fees" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SMSAcc" msprop:Generator_UserTableName="SMSAcc" msprop:Generator_RowEvArgName="SMSAccRowChangeEvent" msprop:Generator_TableVarName="tableSMSAcc" msprop:Generator_TablePropName="SMSAcc" msprop:Generator_RowDeletingName="SMSAccRowDeleting" msprop:Generator_RowChangingName="SMSAccRowChanging" msprop:Generator_RowDeletedName="SMSAccRowDeleted" msprop:Generator_RowEvHandlerName="SMSAccRowChangeEventHandler" msprop:Generator_TableClassName="SMSAccDataTable" msprop:Generator_RowChangedName="SMSAccRowChanged" msprop:Generator_RowClassName="SMSAccRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnPropNameInTable="PasswordColumn" msprop:Generator_UserColumnName="Password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StudentFullName" msprop:Generator_UserTableName="StudentFullName" msprop:Generator_RowEvArgName="StudentFullNameRowChangeEvent" msprop:Generator_TableVarName="tableStudentFullName" msprop:Generator_TablePropName="StudentFullName" msprop:Generator_RowDeletingName="StudentFullNameRowDeleting" msprop:Generator_RowChangingName="StudentFullNameRowChanging" msprop:Generator_RowDeletedName="StudentFullNameRowDeleted" msprop:Generator_RowEvHandlerName="StudentFullNameRowChangeEventHandler" msprop:Generator_TableClassName="StudentFullNameDataTable" msprop:Generator_RowChangedName="StudentFullNameRowChanged" msprop:Generator_RowClassName="StudentFullNameRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentID" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Subjects" msprop:Generator_UserTableName="Subjects" msprop:Generator_RowEvArgName="SubjectsRowChangeEvent" msprop:Generator_TableVarName="tableSubjects" msprop:Generator_TablePropName="Subjects" msprop:Generator_RowDeletingName="SubjectsRowDeleting" msprop:Generator_RowChangingName="SubjectsRowChanging" msprop:Generator_RowDeletedName="SubjectsRowDeleted" msprop:Generator_RowEvHandlerName="SubjectsRowChangeEventHandler" msprop:Generator_TableClassName="SubjectsDataTable" msprop:Generator_RowChangedName="SubjectsRowChanged" msprop:Generator_RowClassName="SubjectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Subject" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" msprop:Generator_UserColumnName="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectID" msprop:Generator_ColumnVarNameInTable="columnSubjectID" msprop:Generator_ColumnPropNameInRow="SubjectID" msprop:Generator_ColumnPropNameInTable="SubjectIDColumn" msprop:Generator_UserColumnName="SubjectID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="enrollment" msprop:Generator_UserTableName="enrollment" msprop:Generator_RowEvArgName="enrollmentRowChangeEvent" msprop:Generator_TableVarName="tableenrollment" msprop:Generator_TablePropName="enrollment" msprop:Generator_RowDeletingName="enrollmentRowDeleting" msprop:Generator_RowChangingName="enrollmentRowChanging" msprop:Generator_RowDeletedName="enrollmentRowDeleted" msprop:Generator_RowEvHandlerName="enrollmentRowChangeEventHandler" msprop:Generator_TableClassName="enrollmentDataTable" msprop:Generator_RowChangedName="enrollmentRowChanged" msprop:Generator_RowClassName="enrollmentRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StudentID" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gender" msprop:Generator_ColumnVarNameInTable="columnGender" msprop:Generator_ColumnPropNameInRow="Gender" msprop:Generator_ColumnPropNameInTable="GenderColumn" msprop:Generator_UserColumnName="Gender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Program" msprop:Generator_ColumnVarNameInTable="columnProgram" msprop:Generator_ColumnPropNameInRow="Program" msprop:Generator_ColumnPropNameInTable="ProgramColumn" msprop:Generator_UserColumnName="Program">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" />
+              <xs:element name="Semester" msprop:Generator_ColumnVarNameInTable="columnSemester" msprop:Generator_ColumnPropNameInRow="Semester" msprop:Generator_ColumnPropNameInTable="SemesterColumn" msprop:Generator_UserColumnName="Semester">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_x0020_Joined" msprop:Generator_ColumnVarNameInTable="columnDate_Joined" msprop:Generator_ColumnPropNameInRow="Date_Joined" msprop:Generator_ColumnPropNameInTable="Date_JoinedColumn" msprop:Generator_UserColumnName="Date Joined" type="xs:int" />
+              <xs:element name="Session" msprop:Generator_ColumnVarNameInTable="columnSession" msprop:Generator_ColumnPropNameInRow="Session" msprop:Generator_ColumnPropNameInTable="SessionColumn" msprop:Generator_UserColumnName="Session">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Intake" msprop:Generator_ColumnVarNameInTable="columnIntake" msprop:Generator_ColumnPropNameInRow="Intake" msprop:Generator_ColumnPropNameInTable="IntakeColumn" msprop:Generator_UserColumnName="Intake" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentName" msprop:Generator_ColumnVarNameInTable="columnStudentName" msprop:Generator_ColumnPropNameInRow="StudentName" msprop:Generator_ColumnPropNameInTable="StudentNameColumn" msprop:Generator_UserColumnName="StudentName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentSurname" msprop:Generator_ColumnVarNameInTable="columnStudentSurname" msprop:Generator_ColumnPropNameInRow="StudentSurname" msprop:Generator_ColumnPropNameInTable="StudentSurnameColumn" msprop:Generator_UserColumnName="StudentSurname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="forms" msprop:Generator_UserTableName="forms" msprop:Generator_RowEvArgName="formsRowChangeEvent" msprop:Generator_TableVarName="tableforms" msprop:Generator_TablePropName="forms" msprop:Generator_RowDeletingName="formsRowDeleting" msprop:Generator_RowChangingName="formsRowChanging" msprop:Generator_RowDeletedName="formsRowDeleted" msprop:Generator_RowEvHandlerName="formsRowChangeEventHandler" msprop:Generator_TableClassName="formsDataTable" msprop:Generator_RowChangedName="formsRowChanged" msprop:Generator_RowClassName="formsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Forms" msprop:Generator_ColumnVarNameInTable="columnForms" msprop:Generator_ColumnPropNameInRow="Forms" msprop:Generator_ColumnPropNameInTable="FormsColumn" msprop:Generator_UserColumnName="Forms">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Year" msprop:Generator_ColumnVarNameInTable="columnYear" msprop:Generator_ColumnPropNameInRow="Year" msprop:Generator_ColumnPropNameInTable="YearColumn" msprop:Generator_UserColumnName="Year" type="xs:int" minOccurs="0" />
+              <xs:element name="Semesters" msprop:Generator_ColumnVarNameInTable="columnSemesters" msprop:Generator_ColumnPropNameInRow="Semesters" msprop:Generator_ColumnPropNameInTable="SemestersColumn" msprop:Generator_UserColumnName="Semesters" type="xs:int" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProgSufix" msprop:Generator_ColumnVarNameInTable="columnProgSufix" msprop:Generator_ColumnPropNameInRow="ProgSufix" msprop:Generator_ColumnPropNameInTable="ProgSufixColumn" msprop:Generator_UserColumnName="ProgSufix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="StudsBySection" msprop:Generator_UserTableName="StudsBySection" msprop:Generator_RowEvArgName="StudsBySectionRowChangeEvent" msprop:Generator_TableVarName="tableStudsBySection" msprop:Generator_TablePropName="StudsBySection" msprop:Generator_RowDeletingName="StudsBySectionRowDeleting" msprop:Generator_RowChangingName="StudsBySectionRowChanging" msprop:Generator_RowDeletedName="StudsBySectionRowDeleted" msprop:Generator_RowEvHandlerName="StudsBySectionRowChangeEventHandler" msprop:Generator_TableClassName="StudsBySectionDataTable" msprop:Generator_RowChangedName="StudsBySectionRowChanged" msprop:Generator_RowClassName="StudsBySectionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StudentID" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentPeriods" msprop:Generator_UserTableName="PaymentPeriods" msprop:Generator_RowEvArgName="PaymentPeriodsRowChangeEvent" msprop:Generator_TableVarName="tablePaymentPeriods" msprop:Generator_TablePropName="PaymentPeriods" msprop:Generator_RowDeletingName="PaymentPeriodsRowDeleting" msprop:Generator_RowChangingName="PaymentPeriodsRowChanging" msprop:Generator_RowDeletedName="PaymentPeriodsRowDeleted" msprop:Generator_RowEvHandlerName="PaymentPeriodsRowChangeEventHandler" msprop:Generator_TableClassName="PaymentPeriodsDataTable" msprop:Generator_RowChangedName="PaymentPeriodsRowChanged" msprop:Generator_RowClassName="PaymentPeriodsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Period" msprop:Generator_ColumnVarNameInTable="columnPeriod" msprop:Generator_ColumnPropNameInRow="Period" msprop:Generator_ColumnPropNameInTable="PeriodColumn" msprop:Generator_UserColumnName="Period" type="xs:int" />
+              <xs:element name="Description" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="81" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Current" msprop:Generator_ColumnVarNameInTable="columnCurrent" msprop:Generator_ColumnPropNameInRow="Current" msprop:Generator_ColumnPropNameInTable="CurrentColumn" msprop:Generator_UserColumnName="Current" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentPeriods1" msprop:Generator_UserTableName="PaymentPeriods1" msprop:Generator_RowEvArgName="PaymentPeriods1RowChangeEvent" msprop:Generator_TableVarName="tablePaymentPeriods1" msprop:Generator_TablePropName="PaymentPeriods1" msprop:Generator_RowDeletingName="PaymentPeriods1RowDeleting" msprop:Generator_RowChangingName="PaymentPeriods1RowChanging" msprop:Generator_RowDeletedName="PaymentPeriods1RowDeleted" msprop:Generator_RowEvHandlerName="PaymentPeriods1RowChangeEventHandler" msprop:Generator_TableClassName="PaymentPeriods1DataTable" msprop:Generator_RowChangedName="PaymentPeriods1RowChanged" msprop:Generator_RowClassName="PaymentPeriods1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Period" msprop:Generator_ColumnVarNameInTable="columnPeriod" msprop:Generator_ColumnPropNameInRow="Period" msprop:Generator_ColumnPropNameInTable="PeriodColumn" msprop:Generator_UserColumnName="Period" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="current" msprop:Generator_ColumnVarNameInTable="columncurrent" msprop:Generator_ColumnPropNameInRow="current" msprop:Generator_ColumnPropNameInTable="currentColumn" msprop:Generator_UserColumnName="current" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="forms1" msprop:Generator_UserTableName="forms1" msprop:Generator_RowEvArgName="forms1RowChangeEvent" msprop:Generator_TableVarName="tableforms1" msprop:Generator_TablePropName="forms1" msprop:Generator_RowDeletingName="forms1RowDeleting" msprop:Generator_RowChangingName="forms1RowChanging" msprop:Generator_RowDeletedName="forms1RowDeleted" msprop:Generator_RowEvHandlerName="forms1RowChangeEventHandler" msprop:Generator_TableClassName="forms1DataTable" msprop:Generator_RowChangedName="forms1RowChanged" msprop:Generator_RowClassName="forms1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Forms" msprop:Generator_ColumnVarNameInTable="columnForms" msprop:Generator_ColumnPropNameInRow="Forms" msprop:Generator_ColumnPropNameInTable="FormsColumn" msprop:Generator_UserColumnName="Forms">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CurrentSubjects" msprop:Generator_UserTableName="CurrentSubjects" msprop:Generator_RowEvArgName="CurrentSubjectsRowChangeEvent" msprop:Generator_TableVarName="tableCurrentSubjects" msprop:Generator_TablePropName="CurrentSubjects" msprop:Generator_RowDeletingName="CurrentSubjectsRowDeleting" msprop:Generator_RowChangingName="CurrentSubjectsRowChanging" msprop:Generator_RowDeletedName="CurrentSubjectsRowDeleted" msprop:Generator_RowEvHandlerName="CurrentSubjectsRowChangeEventHandler" msprop:Generator_TableClassName="CurrentSubjectsDataTable" msprop:Generator_RowChangedName="CurrentSubjectsRowChanged" msprop:Generator_RowClassName="CurrentSubjectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StudentID" msprop:Generator_ColumnVarNameInTable="columnStudentID" msprop:Generator_ColumnPropNameInRow="StudentID" msprop:Generator_ColumnPropNameInTable="StudentIDColumn" msprop:Generator_UserColumnName="StudentID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectID" msprop:Generator_ColumnVarNameInTable="columnSubjectID" msprop:Generator_ColumnPropNameInRow="SubjectID" msprop:Generator_ColumnPropNameInTable="SubjectIDColumn" msprop:Generator_UserColumnName="SubjectID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subject" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnPropNameInTable="SubjectColumn" msprop:Generator_UserColumnName="Subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PaymentType" msprop:Generator_UserTableName="PaymentType" msprop:Generator_RowEvArgName="PaymentTypeRowChangeEvent" msprop:Generator_TableVarName="tablePaymentType" msprop:Generator_TablePropName="PaymentType" msprop:Generator_RowDeletingName="PaymentTypeRowDeleting" msprop:Generator_RowChangingName="PaymentTypeRowChanging" msprop:Generator_RowDeletedName="PaymentTypeRowDeleted" msprop:Generator_RowEvHandlerName="PaymentTypeRowChangeEventHandler" msprop:Generator_TableClassName="PaymentTypeDataTable" msprop:Generator_RowChangedName="PaymentTypeRowChanged" msprop:Generator_RowClassName="PaymentTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="schoolsessions" msprop:Generator_UserTableName="schoolsessions" msprop:Generator_RowEvArgName="schoolsessionsRowChangeEvent" msprop:Generator_TableVarName="tableschoolsessions" msprop:Generator_TablePropName="schoolsessions" msprop:Generator_RowDeletingName="schoolsessionsRowDeleting" msprop:Generator_RowChangingName="schoolsessionsRowChanging" msprop:Generator_RowDeletedName="schoolsessionsRowDeleted" msprop:Generator_RowEvHandlerName="schoolsessionsRowChangeEventHandler" msprop:Generator_TableClassName="schoolsessionsDataTable" msprop:Generator_RowChangedName="schoolsessionsRowChanged" msprop:Generator_RowClassName="schoolsessionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Session" msprop:Generator_ColumnVarNameInTable="columnSession" msprop:Generator_ColumnPropNameInRow="Session" msprop:Generator_ColumnPropNameInTable="SessionColumn" msprop:Generator_UserColumnName="Session">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="schoolsessions1" msprop:Generator_UserTableName="schoolsessions1" msprop:Generator_RowEvArgName="schoolsessions1RowChangeEvent" msprop:Generator_TableVarName="tableschoolsessions1" msprop:Generator_TablePropName="schoolsessions1" msprop:Generator_RowDeletingName="schoolsessions1RowDeleting" msprop:Generator_RowChangingName="schoolsessions1RowChanging" msprop:Generator_RowDeletedName="schoolsessions1RowDeleted" msprop:Generator_RowEvHandlerName="schoolsessions1RowChangeEventHandler" msprop:Generator_TableClassName="schoolsessions1DataTable" msprop:Generator_RowChangedName="schoolsessions1RowChanged" msprop:Generator_RowClassName="schoolsessions1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Session" msprop:Generator_ColumnVarNameInTable="columnSession" msprop:Generator_ColumnPropNameInRow="Session" msprop:Generator_ColumnPropNameInTable="SessionColumn" msprop:Generator_UserColumnName="Session">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Programs" />
+      <xs:field xpath="mstns:Forms" />
+    </xs:unique>
+    <xs:unique name="SemesterDurations_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SemesterDurations" />
+      <xs:field xpath="mstns:Year" />
+      <xs:field xpath="mstns:Semester" />
+      <xs:field xpath="mstns:Program" />
+    </xs:unique>
+    <xs:unique name="SMSAcc_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SMSAcc" />
+      <xs:field xpath="mstns:UserName" />
+      <xs:field xpath="mstns:Password" />
+    </xs:unique>
+    <xs:unique name="StudentFullName_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:StudentFullName" />
+      <xs:field xpath="mstns:StudentID" />
+    </xs:unique>
+    <xs:unique name="Subjects_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Subjects" />
+      <xs:field xpath="mstns:SubjectID" />
+    </xs:unique>
+    <xs:unique name="forms_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:forms" />
+      <xs:field xpath="mstns:Forms" />
+    </xs:unique>
+    <xs:unique name="StudsBySection_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:StudsBySection" />
+      <xs:field xpath="mstns:StudentID" />
+    </xs:unique>
+    <xs:unique name="PaymentPeriods_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PaymentPeriods" />
+      <xs:field xpath="mstns:Period" />
+    </xs:unique>
+    <xs:unique name="PaymentPeriods1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PaymentPeriods1" />
+      <xs:field xpath="mstns:Period" />
+    </xs:unique>
+    <xs:unique name="forms1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:forms1" />
+      <xs:field xpath="mstns:Forms" />
+    </xs:unique>
+    <xs:unique name="schoolsessions_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:schoolsessions" />
+      <xs:field xpath="mstns:Session" />
+    </xs:unique>
+    <xs:unique name="schoolsessions1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:schoolsessions1" />
+      <xs:field xpath="mstns:Session" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

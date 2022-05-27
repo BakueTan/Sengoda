@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07728AF7-530D-402C-9F25-96CBFB9EBDB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Reports</RootNamespace>
+    <AssemblyName>Reports</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Reports.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Miscelleneous">
+      <HintPath>..\Miscelleneous\bin\Debug\Miscelleneous.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dgProgressBar.designer.vb">
+      <DependentUpon>dgProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgProgressBar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsIncomeExpenditure.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIncomeExpenditure.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsIncomeExpenditureReports.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIncomeExpenditureReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLibrary.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLibraryReports.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLibraryReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsReports.designer.vb">
+      <DependentUpon>dsReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dsReports.vb">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRevoReports.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRevoReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsRevoReports.vb">
+      <DependentUpon>dsRevoReports.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSchool.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsStudentSearches.designer.vb">
+      <DependentUpon>dsStudentSearches.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dsStudentSearches.vb">
+      <DependentUpon>dsStudentSearches.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmTranscript.Designer.vb">
+      <DependentUpon>frmTranscript.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTranscript.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Rports.Designer.vb">
+      <DependentUpon>Rports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="schoolDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>schoolDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dgProgressBar.resx">
+      <DependentUpon>dgProgressBar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTranscript.resx">
+      <DependentUpon>frmTranscript.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rports.resx">
+      <DependentUpon>Rports.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptEnrolAnalysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptEnrollmentAnalysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptFeesPaymentsPerForm.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_MarchWood.rdlc" />
+    <EmbeddedResource Include="Rpts\FeesPaymentsPerLevel.rdlc" />
+    <EmbeddedResource Include="Rpts\rptAccCumPay.rdlc" />
+    <EmbeddedResource Include="Rpts\rptAccCumPerSub.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBarcodes.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookInfo.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookIssuesPerBook.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookIssuesPerDate.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookIssuesPerDueDate.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookIssuesPerStud.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookMaster.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookSummary.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookSummaryPerProg.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBookTag.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBorrowerIssues.rdlc" />
+    <EmbeddedResource Include="Rpts\rptBsDatesEnrollment.rdlc" />
+    <EmbeddedResource Include="Rpts\rptClassFeesStatement.rdlc" />
+    <EmbeddedResource Include="Rpts\rptClassRegister.rdlc" />
+    <EmbeddedResource Include="Rpts\rptClassSubjects.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCollegeAvg.rdlc" />
+    <EmbeddedResource Include="Rpts\rptConsolMarkSheet.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptContactsPerSubject.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCourseWork.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCpllegeGeneralAnalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCreditorsOnScreenStatement.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCreditorsStatement.rdlc" />
+    <EmbeddedResource Include="Rpts\rptCreditorsStatement1.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDebtorsBySection.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDebtorsContacts.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptDebtorsOnScreenStatement.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDepartmentalAnalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDepartmentalAnalysis1.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDeptAssOveralAss.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDetMarks.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDetMarksNd.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDetMarksOG.rdlc" />
+    <EmbeddedResource Include="Rpts\rptDroppedSubjects.rdlc" />
+    <EmbeddedResource Include="Rpts\rptECD.rdlc" />
+    <EmbeddedResource Include="Rpts\rptEnrollmenForm.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptExamAttendance.rdlc" />
+    <EmbeddedResource Include="Rpts\rptExamAttForm.rdlc" />
+    <EmbeddedResource Include="Rpts\rptExamBoardsPassRatesAnalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptExamSubjectAnalysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptFeesByDate.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptFeesInvoice.rdlc" />
+    <EmbeddedResource Include="Rpts\rptFeesPaymentsPerClass.rdlc" />
+    <EmbeddedResource Include="Rpts\rptFeesReceipt.rdlc" />
+    <EmbeddedResource Include="Rpts\rptFullTranscript.rdlc" />
+    <EmbeddedResource Include="Rpts\rptFullTranscriptND.rdlc" />
+    <EmbeddedResource Include="Rpts\rptGroupIDcards.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHighSchool.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsMarksPerClass.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptHsMarksPerClass_Alev.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsMarksPerSubject.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptHsReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptHsReport_a4.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_ALEVEL.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_OLEVEL.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptHsReport_Sengoda.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_Sengoda_Alevel.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_Sengoda_old.rdlc" />
+    <EmbeddedResource Include="Rpts\rptHsReport_Sengoda_Alevel_old.rdlc" />
+    <EmbeddedResource Include="Rpts\rptIncomeExpenditure.rdlc" />
+    <EmbeddedResource Include="Rpts\rptIncomeExpenditure_Detailed.rdlc" />
+    <EmbeddedResource Include="Rpts\rptISOADetailed.rdlc" />
+    <EmbeddedResource Include="Rpts\rptISOADisplayed.rdlc" />
+    <EmbeddedResource Include="Rpts\rptISOASummary.rdlc" />
+    <EmbeddedResource Include="Rpts\rptIssueForm.rdlc" />
+    <EmbeddedResource Include="Rpts\rptITenrollment.rdlc" />
+    <EmbeddedResource Include="Rpts\rptITenrollmentbyperiod.rdlc" />
+    <EmbeddedResource Include="Rpts\rptKnowHow.rdlc" />
+    <EmbeddedResource Include="Rpts\rptKnowhowAnalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLectAllAssmnts.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLectAssPerLecturer.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLectAssPerSchool.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLectAssPerSub.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLectureGeneralAnalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLecturerRatingsPerSection.rdlc" />
+    <EmbeddedResource Include="Rpts\rptLeftStudents.rdlc" />
+    <EmbeddedResource Include="Rpts\rptMarkSheet.rdlc" />
+    <EmbeddedResource Include="Rpts\rptOtherCreditors.rdlc" />
+    <EmbeddedResource Include="Rpts\rptOtherDebtors.rdlc" />
+    <EmbeddedResource Include="Rpts\rptPastel.rdlc" />
+    <EmbeddedResource Include="Rpts\rptPaymentsAnalysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptPaymentsAnalysisPerPeriod.rdlc" />
+    <EmbeddedResource Include="Rpts\rptPrimarySchool.rdlc" />
+    <EmbeddedResource Include="Rpts\rptRegister3.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResDisplay.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResDisplayOG.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResultDisplayNd.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResultSummary.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResultSummaryNd.rdlc" />
+    <EmbeddedResource Include="Rpts\rptResultSummaryOG.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSchoolCurricula.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSchoolEnrollment.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptSchoolInfoRecords.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSectionSubs.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffAssessPerSub.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffPersonalDetails.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffPersonalDetailsPerContract.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffPersonalDetailsPerTeacher.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffProfile.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffQualifByQualification.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffQualifByStaff.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffRegisterByDate.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStaffRegisterByStaff.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudClsReg.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudContacts.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudContactsAll.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudContactsPerClass.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudDetails.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudentClasses.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptStudentClassesperiodanalysis.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudentExamAnaLysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptStudentRegister.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudentSubjects.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudFeesStatement.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpts\rptStudProfile.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudStatementOfAcc.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudStatementOfAccPastel.rdlc" />
+    <EmbeddedResource Include="Rpts\rptStudSubReg.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSubjectPoints.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSubjectsTaught.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSubjectStudents.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSubjectStudentsPerProgram.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSubRegPerSub.rdlc" />
+    <EmbeddedResource Include="Rpts\rptSujectPoints.rdlc" />
+    <EmbeddedResource Include="Rpts\rptTrans1.rdlc" />
+    <EmbeddedResource Include="Rpts\rptTrans2.rdlc" />
+    <EmbeddedResource Include="Rpts\rptTransISOA.rdlc" />
+    <EmbeddedResource Include="Rpts\rptTransNd.rdlc" />
+    <EmbeddedResource Include="Rpts\rptTransSummary.rdlc" />
+    <EmbeddedResource Include="Rpts\rptUserLognHistory.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dsIncomeExpenditure.xsc">
+      <DependentUpon>dsIncomeExpenditure.xsd</DependentUpon>
+    </None>
+    <None Include="dsIncomeExpenditure.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIncomeExpenditure.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsIncomeExpenditure.xss">
+      <DependentUpon>dsIncomeExpenditure.xsd</DependentUpon>
+    </None>
+    <None Include="dsIncomeExpenditureReports.xsc">
+      <DependentUpon>dsIncomeExpenditureReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsIncomeExpenditureReports.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIncomeExpenditureReports.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsIncomeExpenditureReports.xss">
+      <DependentUpon>dsIncomeExpenditureReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibrary.xsc">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibrary.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLibrary.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsLibrary.xss">
+      <DependentUpon>dsLibrary.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibraryReports.xsc">
+      <DependentUpon>dsLibraryReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsLibraryReports.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLibraryReports.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsLibraryReports.xss">
+      <DependentUpon>dsLibraryReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsReports.xsc">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsReports.xsd" />
+    <None Include="dsReports.xss">
+      <DependentUpon>dsReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsRevoReports.xsc">
+      <DependentUpon>dsRevoReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsRevoReports.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRevoReports.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsRevoReports.xss">
+      <DependentUpon>dsRevoReports.xsd</DependentUpon>
+    </None>
+    <None Include="dsSchool.xsc">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="dsSchool.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSchool.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsSchool.xss">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="dsStudentSearches.xsc">
+      <DependentUpon>dsStudentSearches.xsd</DependentUpon>
+    </None>
+    <None Include="dsStudentSearches.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStudentSearches1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsStudentSearches.xss">
+      <DependentUpon>dsStudentSearches.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="schoolDataSet.xsc">
+      <DependentUpon>schoolDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="schoolDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>schoolDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schoolDataSet.xss">
+      <DependentUpon>schoolDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

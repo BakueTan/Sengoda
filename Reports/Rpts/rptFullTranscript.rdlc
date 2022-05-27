@@ -1,0 +1,1349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="soccerConnectionString">
+      <rd:DataSourceID>fedbecb1-8fb9-4db8-a64f-1ef41c7a187c</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source= .\sqlexpress;Initial Catalog=soccer;User ID=sa;Password=botai</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.001in</RightMargin>
+  <LeftMargin>0.1in</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <Height>0.125in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>194a7957-3b0e-487c-8d00-8dedd4662be1</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dsReports_Transcript">
+      <Fields>
+        <Field Name="StudentID">
+          <DataField>StudentID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudentName">
+          <DataField>StudentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudentSurname">
+          <DataField>StudentSurname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SubjectID">
+          <DataField>SubjectID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Subject">
+          <DataField>Subject</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Semester">
+          <DataField>Semester</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Points">
+          <DataField>Points</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Decision">
+          <DataField>Decision</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RerefenceName">
+          <DataField>RerefenceName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Program">
+          <DataField>Program</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExamMark">
+          <DataField>ExamMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseMark">
+          <DataField>CourseMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalMark">
+          <DataField>FinalMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Date_Joined">
+          <DataField>Date Joined</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Session">
+          <DataField>Session</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Intake">
+          <DataField>Intake</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Section">
+          <DataField>Section</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExamStatus">
+          <DataField>ExamStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Credits">
+          <DataField>Credits</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Type">
+          <DataField>Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CarriedSubs">
+          <DataField>CarriedSubs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RetakeSubs">
+          <DataField>RetakeSubs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExamAverage">
+          <DataField>ExamAverage</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="SuppSubs">
+          <DataField>SuppSubs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DegreeAverage">
+          <DataField>DegreeAverage</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateOfBirth">
+          <DataField>DateOfBirth</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="PlaceOfBirth">
+          <DataField>PlaceOfBirth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Completed">
+          <DataField>Completed</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Repeat">
+          <DataField>Repeat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RepeatSubs">
+          <DataField>RepeatSubs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalRpeat">
+          <DataField>FinalRpeat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Grade">
+          <DataField>Grade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalRepeatSubs">
+          <DataField>FinalRepeatSubs</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LevelGrade">
+          <DataField>LevelGrade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LevelMark">
+          <DataField>LevelMark</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="LevelCarry">
+          <DataField>LevelCarry</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LevelRetake">
+          <DataField>LevelRetake</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalCompleted">
+          <DataField>FinalCompleted</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Aggregate">
+          <DataField>Aggregate</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Level">
+          <DataField>Level</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LevelRepeat">
+          <DataField>LevelRepeat</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="LevelPoints">
+          <DataField>LevelPoints</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LevelFail">
+          <DataField>LevelFail</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Repeat1">
+          <DataField>Repeat1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Repeat2">
+          <DataField>Repeat2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>soccerConnectionString</DataSourceName>
+        <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname, StudentPersonalDetails.Gender, 
+                         StudentMarks.SubjectID, Subjects.Subject, StudentMarks.Semester, StudentMarks.ExamMark, StudentMarks.CourseMark, StudentMarks.FinalMark, 
+                         StudentMarks.Points, StudentMarks.Decision, StudentMarks.RerefenceName, forms.Description, StudentMarks.Program, StudentMarks.Year, 
+                         enrollment.[Date Joined], enrollment.Session, enrollment.Intake, forms.Section, StudentMarks.ExamStatus, Subjects.Credits, Subjects.Type, 
+                         CarrySubs.SubjectID AS CarriedSubs, RetakeSubs.Subjects AS RetakeSubs, avg1.Average AS ExamAverage, SuppSubs.Subjects AS SuppSubs, 
+                         StudentPersonalDetails.DateOfBirth, StudentPersonalDetails.PlaceOfBirth, SemesterDurations.StartDate, SemesterDurations.EndDate, 
+                         FinalGrade.Repeat AS FinalRpeat, FinalGrade.RepeatSubs AS FinalRepeatSubs, FinalGrade.Grade, LevelGrade.LevelGrade, LevelGrade.LevelMark, 
+                         LevelGrade.RetakeSubs AS LevelCarry, LevelGrade.Retake AS LevelRetake, FinalGrade.Completed AS FinalCompleted, FinalGrade.Aggregate, LevelGrade.Level, 
+                         LevelGrade.LevelRepeat, LevelGrade.Repeat, StudentPersonalDetails.Image, LevelGrade.LevelPoints, LevelGrade.LevelFail, LevelGrade.Repeat1, 
+                         LevelGrade.Repeat2
+FROM            StudentPersonalDetails INNER JOIN
+                         StudentMarks ON StudentPersonalDetails.StudentID = StudentMarks.StudentID INNER JOIN
+                         Subjects ON StudentMarks.SubjectID = Subjects.SubjectID INNER JOIN
+                         forms ON StudentPersonalDetails.Program = forms.Forms INNER JOIN
+                         enrollment ON StudentMarks.StudentID = enrollment.StudentID AND StudentMarks.Program = enrollment.Program AND StudentMarks.Year = enrollment.Year AND 
+                         StudentMarks.Semester = enrollment.Semester FULL OUTER JOIN
+                         LevelGrade ON StudentMarks.StudentID = LevelGrade.StudentID AND StudentMarks.Year = LevelGrade.Level AND 
+                         StudentMarks.Program = LevelGrade.Program FULL OUTER JOIN
+                         FinalGrade ON StudentMarks.StudentID = FinalGrade.StudentID AND StudentMarks.Program = FinalGrade.Program FULL OUTER JOIN
+                         SemesterDurations ON enrollment.Year = SemesterDurations.Year AND enrollment.Semester = SemesterDurations.Semester AND 
+                         enrollment.Program = SemesterDurations.Program AND enrollment.[Date Joined] = SemesterDurations.Class AND 
+                         enrollment.Intake = SemesterDurations.Intake FULL OUTER JOIN
+                         SuppSubs ON StudentMarks.StudentID = SuppSubs.StudentID AND StudentMarks.Program = SuppSubs.Program AND 
+                         StudentMarks.Year = SuppSubs.Year FULL OUTER JOIN
+                         avg1 ON StudentMarks.StudentID = avg1.StudentID AND StudentMarks.Year = avg1.Year AND StudentMarks.Program = avg1.Program AND 
+                         StudentMarks.Semester = avg1.Semester FULL OUTER JOIN
+                         RetakeSubs ON StudentMarks.StudentID = RetakeSubs.StudentID AND StudentMarks.Program = RetakeSubs.Program AND 
+                         StudentMarks.Year = RetakeSubs.Year FULL OUTER JOIN
+                         CarrySubs ON StudentMarks.StudentID = CarrySubs.StudentID AND StudentMarks.Program = CarrySubs.Program AND CarrySubs.Year = StudentMarks.Year
+WHERE        (StudentMarks.Program = @program) AND (enrollment.[Date Joined] = @class) AND (forms.Section = @section) AND (enrollment.Intake = @intake) AND 
+                         (StudentPersonalDetails.StudentID = @stud)
+ORDER BY StudentMarks.Year, StudentMarks.Semester, StudentMarks.RerefenceName</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsReports</rd:DataSetName>
+        <rd:TableName>Transcript</rd:TableName>
+        <rd:TableAdapterName>TranscriptTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillbyStud</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>8.375in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="List1">
+        <Sorting>
+          <SortBy>
+            <SortExpression>=Fields!StudentID.Value</SortExpression>
+            <Direction>Ascending</Direction>
+          </SortBy>
+        </Sorting>
+        <DataSetName>dsReports_Transcript</DataSetName>
+        <ReportItems>
+          <Textbox Name="textbox7">
+            <rd:DefaultName>textbox7</rd:DefaultName>
+            <Top>3.625in</Top>
+            <Width>5.875in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>25</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=switch(fields!FinalCompleted.value = "True" and fields!FinalRpeat.Value = "False" and fields!LevelPoints.Value &gt;= 40,ucase((iif(fields!Grade.Value = "F","Fail","Pass"))),fields!FinalCompleted.value = "False","PENDING",fields!FinalRpeat.Value= "True" and fields!LevelPoints.Value &gt;=40,UCASE(fields!FinalRepeatSubs.Value),fields!FinalRpeat.Value= "True" and fields!LevelPoints.Value &lt; 40,UCASE(fields!LevelFail.Value))</Value>
+          </Textbox>
+          <Textbox Name="textbox6">
+            <Top>4.5in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>24</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>NONE</Value>
+          </Textbox>
+          <Textbox Name="textbox4">
+            <Top>4.25in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>23</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>PRIZES AWARDED:</Value>
+          </Textbox>
+          <Textbox Name="textbox51">
+            <Top>1.875in</Top>
+            <Width>0.625in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>22</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>1.875in</Left>
+            <Height>0.25in</Height>
+            <Value>From :</Value>
+          </Textbox>
+          <Textbox Name="textbox20">
+            <Top>1.875in</Top>
+            <Width>3in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>21</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>4.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=monthname(month(max(fields!EndDate.value)))  &amp; " - " &amp; year(max(fields!EndDate.value))</Value>
+          </Textbox>
+          <Textbox Name="textbox19">
+            <Top>1.875in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>20</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.5in</Left>
+            <Height>0.25in</Height>
+            <Value>= monthname(month(min(fields!StartDate.value))) &amp; " - " &amp; year(min(fields!StartDate.value)) &amp; " to "</Value>
+          </Textbox>
+          <Textbox Name="textbox49">
+            <rd:DefaultName>textbox49</rd:DefaultName>
+            <Top>1.125in</Top>
+            <Width>2.875in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>19</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=ucase(fields!PlaceOfBirth.Value)</Value>
+          </Textbox>
+          <Textbox Name="textbox48">
+            <rd:DefaultName>textbox48</rd:DefaultName>
+            <Top>1.625in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>18</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Programme taken</Value>
+          </Textbox>
+          <Textbox Name="textbox36">
+            <rd:DefaultName>textbox36</rd:DefaultName>
+            <Top>5.875in</Top>
+            <Width>3.375in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>17</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>="DEPUTY REGISTRAR (ACADEMIC)"</Value>
+          </Textbox>
+          <Line Name="line1">
+            <Top>5.75in</Top>
+            <Width>3.5in</Width>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <BorderWidth>
+                <Default>0.8pt</Default>
+              </BorderWidth>
+            </Style>
+            <ZIndex>16</ZIndex>
+            <Left>0.5in</Left>
+            <Height>0in</Height>
+          </Line>
+          <Textbox Name="textbox22">
+            <rd:DefaultName>textbox22</rd:DefaultName>
+            <Top>5in</Top>
+            <Width>7in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>15</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>= "Printed on: " &amp; FormatDateTime(now(),1 ) &amp; " " &amp; timeofday()</Value>
+          </Textbox>
+          <Textbox Name="textbox35">
+            <Top>0.625in</Top>
+            <Width>4.25in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>14</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=ucase(Fields!StudentName.value)</Value>
+          </Textbox>
+          <Textbox Name="textbox34">
+            <Top>0.375in</Top>
+            <Width>5.25in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>13</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=ucase(fields!StudentSurname.value)</Value>
+          </Textbox>
+          <Textbox Name="textbox33">
+            <Top>0.625in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>12</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>First Names:</Value>
+          </Textbox>
+          <Textbox Name="textbox32">
+            <Top>0.375in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>11</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Surname:</Value>
+          </Textbox>
+          <Textbox Name="textbox31">
+            <Top>1.125in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>10</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Place of Birth:</Value>
+          </Textbox>
+          <Textbox Name="textbox30">
+            <rd:DefaultName>textbox30</rd:DefaultName>
+            <Top>3.875in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>9</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>DEGREE CLASS:</Value>
+          </Textbox>
+          <Textbox Name="textbox23">
+            <Top>0.875in</Top>
+            <Width>3in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>8</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=day(fields!DateOfBirth.value) &amp; "-" &amp; ucASe(monthname(month(fields!DateOfBirth.value),0)) &amp; "-" &amp; year(fields!DateOfBirth.value)</Value>
+          </Textbox>
+          <Textbox Name="textbox24">
+            <Top>0.875in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>7</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Date of Birth:</Value>
+          </Textbox>
+          <Textbox Name="textbox18">
+            <rd:DefaultName>textbox18</rd:DefaultName>
+            <Top>3.625in</Top>
+            <Width>1.75in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>6</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>OVERALL DECISION:</Value>
+          </Textbox>
+          <Textbox Name="textbox5">
+            <rd:DefaultName>textbox5</rd:DefaultName>
+            <Top>1.375in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>5</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Programme:</Value>
+          </Textbox>
+          <Textbox Name="Program">
+            <rd:DefaultName>Program</rd:DefaultName>
+            <Top>1.375in</Top>
+            <Width>5.625in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>4</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!Description.value</Value>
+          </Textbox>
+          <Table Name="table1">
+            <ZIndex>3</ZIndex>
+            <DataSetName>dsReports_Transcript</DataSetName>
+            <Top>2.25in</Top>
+            <TableGroups>
+              <TableGroup>
+                <Grouping Name="table1_Year">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!RerefenceName.Value</GroupExpression>
+                  </GroupExpressions>
+                </Grouping>
+                <Sorting>
+                  <SortBy>
+                    <SortExpression>=Fields!Year.Value</SortExpression>
+                    <Direction>Ascending</Direction>
+                  </SortBy>
+                </Sorting>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="Year">
+                              <rd:DefaultName>Year</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>24</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox9">
+                              <rd:DefaultName>textbox9</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>23</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>
+                                  </Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox11">
+                              <rd:DefaultName>textbox11</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>21</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>
+                                  </Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox12">
+                              <rd:DefaultName>textbox12</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Tahoma</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>20</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>
+                                  </Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+              </TableGroup>
+              <TableGroup>
+                <Grouping Name="table1_RerefenceName">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!Year.Value</GroupExpression>
+                    <GroupExpression>=Fields!Semester.Value</GroupExpression>
+                  </GroupExpressions>
+                </Grouping>
+                <Sorting>
+                  <SortBy>
+                    <SortExpression>=Fields!Semester.Value</SortExpression>
+                    <Direction>Ascending</Direction>
+                  </SortBy>
+                </Sorting>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox13">
+                              <rd:DefaultName>textbox13</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>19</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>
+                                  </Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="RerefenceName">
+                              <rd:DefaultName>RerefenceName</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>18</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=monthname(month(fields!StartDate.Value))</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox15">
+                              <rd:DefaultName>textbox15</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>16</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>= year(fields!StartDate.Value) &amp; " - "  &amp; monthname(month(fields!EndDate.value)) &amp; " " &amp; year(fields!EndDate.Value) &amp; iif(fields!Year.Value = 3," (WRL) ","")</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox16">
+                              <rd:DefaultName>textbox16</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>15</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>
+                                  </Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox38">
+                              <rd:DefaultName>textbox38</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>14</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox39">
+                              <rd:DefaultName>textbox39</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>13</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>="Academic"</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox41">
+                              <rd:DefaultName>textbox41</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>11</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=switch(trim(fields!SubjectID.value) = "BMIS311" ,"Year 3  Semester 2 " ,fields!SubjectID.value &lt;&gt; "BMIS311", "Year " &amp;  fields!Year.Value &amp; " Semester " &amp; fields!Semester.Value )</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox42">
+                              <rd:DefaultName>textbox42</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>10</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox43">
+                              <rd:DefaultName>textbox43</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>9</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox21">
+                              <rd:DefaultName>textbox21</rd:DefaultName>
+                              <Style>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>16</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>Module</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox46">
+                              <rd:DefaultName>textbox46</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>6</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="textbox47">
+                              <rd:DefaultName>textbox47</rd:DefaultName>
+                              <Style>
+                                <BackgroundColor>White</BackgroundColor>
+                                <BorderColor>
+                                  <Default>White</Default>
+                                </BorderColor>
+                                <BorderStyle>
+                                  <Default>Solid</Default>
+                                </BorderStyle>
+                                <FontFamily>Courier New</FontFamily>
+                                <FontWeight>700</FontWeight>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>5</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>= IIF(FIELDS!Year.value = 1 and fields!Semester.value = 1 ,"Grade"," " )</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.25in</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+              </TableGroup>
+            </TableGroups>
+            <Width>7.41923in</Width>
+            <Details>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox25">
+                          <Style>
+                            <BorderColor>
+                              <Default>White</Default>
+                            </BorderColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>4</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>
+                              </Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox26">
+                          <Style>
+                            <BorderColor>
+                              <Default>White</Default>
+                            </BorderColor>
+                            <FontFamily>Courier New</FontFamily>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>3</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=trim(Fields!SubjectID.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox2">
+                          <rd:DefaultName>textbox2</rd:DefaultName>
+                          <Style>
+                            <BorderColor>
+                              <Default>White</Default>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Courier New</FontFamily>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>6</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=trim(Fields!Subject.Value)</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="textbox29">
+                          <Style>
+                            <BorderColor>
+                              <Default>White</Default>
+                            </BorderColor>
+                            <BorderStyle>
+                              <Default>Solid</Default>
+                            </BorderStyle>
+                            <FontFamily>Courier New</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <CanGrow>true</CanGrow>
+                          <Value>=switch(fields!ExamStatus.Value &lt;&gt; "NotRegistered" OR fields!ExamStatus.Value &lt;&gt; "Presumed Withdrawal" ,trim(Fields!Decision.Value),fields!ExamStatus.Value =  "NotRegistered","N/R",fields!ExamStatus.Value =  "Presumed Withdrawal","P/W")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                  </TableCells>
+                  <Height>0.21in</Height>
+                </TableRow>
+              </TableRows>
+              <Grouping Name="table1_Details_Group">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!SubjectID.Value</GroupExpression>
+                </GroupExpressions>
+              </Grouping>
+              <Sorting>
+                <SortBy>
+                  <SortExpression>=Fields!Semester.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+                <SortBy>
+                  <SortExpression>=Fields!RerefenceName.Value</SortExpression>
+                  <Direction>Ascending</Direction>
+                </SortBy>
+              </Sorting>
+            </Details>
+            <Style>
+              <Color>White</Color>
+              <BorderColor>
+                <Default>White</Default>
+              </BorderColor>
+            </Style>
+            <TableColumns>
+              <TableColumn>
+                <Width>0.11923in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>0.95385in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>5.75in</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>0.59615in</Width>
+              </TableColumn>
+            </TableColumns>
+            <Height>1.21in</Height>
+            <Left>0.375in</Left>
+          </Table>
+          <Textbox Name="textbox3">
+            <rd:DefaultName>textbox3</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Width>1.5in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <FontWeight>700</FontWeight>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>2</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>Reg.Number:</Value>
+          </Textbox>
+          <Textbox Name="StudentID">
+            <rd:DefaultName>StudentID</rd:DefaultName>
+            <Top>0.125in</Top>
+            <Width>5.625in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>2.125in</Left>
+            <Height>0.25in</Height>
+            <Value>=Fields!StudentID.Value</Value>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Top>3.875in</Top>
+            <Width>4.625in</Width>
+            <Style>
+              <FontFamily>Courier New</FontFamily>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <CanGrow>true</CanGrow>
+            <Left>2.25in</Left>
+            <Height>0.25in</Height>
+            <Value>=switch(fields!FinalCompleted.value  = "True" and fields!FinalRpeat.Value = "False" and fields!LevelPoints.Value &gt;= 40 ,fields!Grade.Value,fields!FinalCompleted.value  = "False","Pending",fields!FinalRpeat.Value= "True","")</Value>
+          </Textbox>
+        </ReportItems>
+        <Filters>
+          <Filter>
+            <FilterExpression />
+            <Operator>Equal</Operator>
+            <FilterValues>
+              <FilterValue />
+            </FilterValues>
+          </Filter>
+        </Filters>
+        <Width>8.25in</Width>
+        <Style>
+          <Color>SlateGray</Color>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+        </Style>
+        <Grouping Name="list1_StudentID">
+          <GroupExpressions>
+            <GroupExpression>=Fields!StudentID.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+      </List>
+    </ReportItems>
+    <Height>10in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox37">
+        <rd:DefaultName>textbox37</rd:DefaultName>
+        <Width>1.375in</Width>
+        <Style>
+          <FontFamily>Courier New</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>3.125in</Left>
+        <Height>0.25in</Height>
+        <Value>=Globals!PageNumber &amp; " 0F " &amp; Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.375in</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>1in</TopMargin>
+</Report>

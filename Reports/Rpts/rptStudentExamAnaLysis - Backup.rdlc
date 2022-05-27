@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="soccerConnectionString">
+      <rd:DataSourceID>3d014537-238b-4d57-9b7f-1853551d5a48</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=(local);Initial Catalog=GEVSTEIN;User ID=sa;Password=botai</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>a6eeb5bd-a211-4dde-9b6d-e67ec77c16a9</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dsReports_HsExamMarks">
+      <Fields>
+        <Field Name="StudentID">
+          <DataField>StudentID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudentName">
+          <DataField>StudentName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudentSurname">
+          <DataField>StudentSurname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Gender">
+          <DataField>Gender</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SubjectID">
+          <DataField>SubjectID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Subject">
+          <DataField>Subject</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Semester">
+          <DataField>Semester</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ExamMark">
+          <DataField>ExamMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CourseMark">
+          <DataField>CourseMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinalMark">
+          <DataField>FinalMark</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Points">
+          <DataField>Points</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Decision">
+          <DataField>Decision</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RerefenceName">
+          <DataField>RerefenceName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Program">
+          <DataField>Program</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OvGrade">
+          <DataField>OvGrade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExamAverage">
+          <DataField>ExamAverage</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Subjects">
+          <DataField>Subjects</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Date_Joined">
+          <DataField>Date Joined</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Session">
+          <DataField>Session</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Intake">
+          <DataField>Intake</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Section">
+          <DataField>Section</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExamStatus">
+          <DataField>ExamStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Comment">
+          <DataField>Comment</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CancelledOn">
+          <DataField>CancelledOn</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CancelledBy">
+          <DataField>CancelledBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastChangedOn">
+          <DataField>LastChangedOn</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="LastChangedBy">
+          <DataField>LastChangedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CreatedOn">
+          <DataField>CreatedOn</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sess2">
+          <DataField>Sess2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PASSES">
+          <DataField>PASSES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassPosition">
+          <DataField>ClassPosition</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassStudents">
+          <DataField>ClassStudents</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>soccerConnectionString</DataSourceName>
+        <CommandText>SELECT        StudentPersonalDetails.StudentID, StudentPersonalDetails.StudentName, StudentPersonalDetails.StudentSurname, StudentPersonalDetails.Gender, StudentMarks.SubjectID, Subjects.Subject, 
+                         StudentMarks.Semester, StudentMarks.ExamMark, StudentMarks.CourseMark, StudentMarks.FinalMark, StudentMarks.Points, StudentMarks.Decision, StudentMarks.RerefenceName, forms.Description, 
+                         StudentMarks.Program, ExamOverallGrade.Grade AS OvGrade, avg1.Average AS ExamAverage, StudentMarks.Year, SubjectsTaken.Subjects, enrollment.[Date Joined], enrollment.Session, enrollment.Intake, 
+                         forms.Section, StudentMarks.ExamStatus, StudentMarks.Comment, StudentMarks.Status, StudentMarks.CancelledOn, StudentMarks.CancelledBy, StudentMarks.LastChangedOn, StudentMarks.LastChangedBy, 
+                         StudentMarks.CreatedOn, StudentMarks.CreatedBy, @sess2 AS Sess2, vwExamPasses.PASSES, FormPositions.Position AS ClassPosition, vwClassStudents.studs AS ClassStudents
+FROM            StudentPersonalDetails INNER JOIN
+                         StudentMarks ON StudentPersonalDetails.StudentID = StudentMarks.StudentID INNER JOIN
+                         Subjects ON StudentMarks.SubjectID = Subjects.SubjectID INNER JOIN
+                         forms ON StudentPersonalDetails.Program = forms.Forms INNER JOIN
+                         ExamOverallGrade ON StudentMarks.StudentID = ExamOverallGrade.StudentID AND StudentMarks.Year = ExamOverallGrade.Year AND StudentMarks.Program = ExamOverallGrade.Program AND 
+                         StudentMarks.Semester = ExamOverallGrade.Semester AND StudentMarks.RerefenceName = ExamOverallGrade.RerefenceName INNER JOIN
+                         avg1 ON StudentMarks.StudentID = avg1.StudentID AND StudentMarks.Year = avg1.Year AND StudentMarks.Program = avg1.Program AND StudentMarks.Semester = avg1.Semester AND 
+                         StudentMarks.RerefenceName = avg1.RerefenceName INNER JOIN
+                         SubjectsTaken ON StudentMarks.StudentID = SubjectsTaken.StudentID AND StudentMarks.Year = SubjectsTaken.Year AND StudentMarks.Program = SubjectsTaken.Program AND 
+                         StudentMarks.Semester = SubjectsTaken.Semester AND StudentMarks.RerefenceName = SubjectsTaken.RerefenceName INNER JOIN
+                         enrollment ON StudentMarks.StudentID = enrollment.StudentID AND StudentMarks.Program = enrollment.Program AND StudentMarks.Year = enrollment.Year AND 
+                         StudentMarks.Semester = enrollment.Semester INNER JOIN
+                         vwExamPasses ON StudentMarks.StudentID = vwExamPasses.StudentID AND StudentMarks.RerefenceName = vwExamPasses.RerefenceName INNER JOIN
+                         FormPositions ON StudentMarks.StudentID = FormPositions.Studentid AND StudentMarks.Semester = FormPositions.Semester AND StudentMarks.Year = FormPositions.Level AND 
+                         StudentMarks.RerefenceName = FormPositions.Exam INNER JOIN
+                         vwClassStudents ON StudentMarks.Program = vwClassStudents.Program AND StudentMarks.Year = vwClassStudents.Year AND StudentMarks.Semester = vwClassStudents.Semester AND 
+                         enrollment.Session = vwClassStudents.Session AND enrollment.[Date Joined] = vwClassStudents.[Date Joined]
+WHERE        (forms.Section = 'High School') AND (StudentMarks.Year = @lev) AND (enrollment.Session BETWEEN @sess AND @sess2) AND (StudentMarks.RerefenceName = @ref) AND (StudentMarks.Status = 1)
+ORDER BY StudentMarks.FinalMark DESC, ExamAverage DESC</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsReports</rd:DataSetName>
+        <rd:TableName>HsExamMarks</rd:TableName>
+        <rd:TableAdapterName>HsExamMarksTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>FillByClass</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>8.375in</Width>
+  <Body>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.25in</Left>
+        <DataSetName>dsReports_HsExamMarks</DataSetName>
+        <ReportItems>
+          <Textbox Name="textbox1">
+            <rd:DefaultName>textbox1</rd:DefaultName>
+            <Top>0.25in</Top>
+            <Width>6.25in</Width>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+            <ZIndex>1</ZIndex>
+            <CanGrow>true</CanGrow>
+            <Left>0.5in</Left>
+            <Height>0.25in</Height>
+            <Value>="STUDENT : " &amp; fields!StudentSurname.Value &amp; " " &amp; fields!StudentName.Value</Value>
+          </Textbox>
+          <Chart Name="chart1">
+            <Legend>
+              <Visible>true</Visible>
+              <Style>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+              <Position>RightCenter</Position>
+            </Legend>
+            <CategoryAxis>
+              <Axis>
+                <Title>
+                  <Caption>Subject</Caption>
+                </Title>
+                <MajorGridLines>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                  </Style>
+                </MajorGridLines>
+                <MinorGridLines>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                  </Style>
+                </MinorGridLines>
+                <MajorTickMarks>Outside</MajorTickMarks>
+                <Min>0</Min>
+                <Visible>true</Visible>
+              </Axis>
+            </CategoryAxis>
+            <DataSetName>dsReports_HsExamMarks</DataSetName>
+            <PlotArea>
+              <Style>
+                <BackgroundColor>LightGrey</BackgroundColor>
+                <BorderStyle>
+                  <Default>Solid</Default>
+                </BorderStyle>
+              </Style>
+            </PlotArea>
+            <ThreeDProperties>
+              <Rotation>30</Rotation>
+              <Inclination>30</Inclination>
+              <Shading>Simple</Shading>
+              <WallThickness>50</WallThickness>
+            </ThreeDProperties>
+            <PointWidth>0</PointWidth>
+            <SeriesGroupings>
+              <SeriesGrouping>
+                <DynamicSeries>
+                  <Grouping Name="chart1_SeriesGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!RerefenceName.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Label>=Fields!RerefenceName.Value</Label>
+                </DynamicSeries>
+              </SeriesGrouping>
+            </SeriesGroupings>
+            <Top>0.75in</Top>
+            <Subtype>Plain</Subtype>
+            <ValueAxis>
+              <Axis>
+                <Title>
+                  <Caption>FinalMark</Caption>
+                </Title>
+                <MajorGridLines>
+                  <ShowGridLines>true</ShowGridLines>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                  </Style>
+                </MajorGridLines>
+                <MinorGridLines>
+                  <ShowGridLines>true</ShowGridLines>
+                  <Style>
+                    <BorderStyle>
+                      <Default>Solid</Default>
+                    </BorderStyle>
+                  </Style>
+                </MinorGridLines>
+                <MajorTickMarks>Outside</MajorTickMarks>
+                <Min>0</Min>
+                <Max>100</Max>
+                <MajorInterval>10</MajorInterval>
+                <MinorInterval>5</MinorInterval>
+                <Margin>true</Margin>
+                <Visible>true</Visible>
+                <Scalar>true</Scalar>
+              </Axis>
+            </ValueAxis>
+            <Type>Column</Type>
+            <CategoryGroupings>
+              <CategoryGrouping>
+                <DynamicCategories>
+                  <Grouping Name="chart1_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!SubjectID.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Grouping>
+                  <Label>=Fields!SubjectID.Value</Label>
+                </DynamicCategories>
+              </CategoryGrouping>
+            </CategoryGroupings>
+            <Palette>Default</Palette>
+            <ChartData>
+              <ChartSeries>
+                <DataPoints>
+                  <DataPoint>
+                    <DataValues>
+                      <DataValue>
+                        <Value>=CInt(fields!FinalMark.Value)</Value>
+                      </DataValue>
+                    </DataValues>
+                    <DataLabel />
+                    <Style />
+                    <Marker>
+                      <Type>Auto</Type>
+                      <Size>6pt</Size>
+                    </Marker>
+                  </DataPoint>
+                </DataPoints>
+              </ChartSeries>
+            </ChartData>
+            <Style>
+              <BackgroundColor>White</BackgroundColor>
+            </Style>
+            <Title>
+              <Caption>StudentExamChart</Caption>
+            </Title>
+            <Height>4in</Height>
+            <Left>0.5in</Left>
+          </Chart>
+        </ReportItems>
+        <Top>0.375in</Top>
+        <PageBreakAtEnd>true</PageBreakAtEnd>
+        <Width>7.75in</Width>
+        <Grouping Name="list1_Details_Group">
+          <GroupExpressions>
+            <GroupExpression>=Fields!StudentID.Value</GroupExpression>
+          </GroupExpressions>
+          <PageBreakAtEnd>true</PageBreakAtEnd>
+        </Grouping>
+        <Height>5.125in</Height>
+      </List>
+    </ReportItems>
+    <Height>5.875in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

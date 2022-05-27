@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1AC10CF-D6C7-400E-819F-D2416F5BDE72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SchoolParameters</RootNamespace>
+    <AssemblyName>SchoolParameters</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SchoolParameters.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SchoolParameters.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Miscelleneous">
+      <HintPath>..\Miscelleneous\bin\Debug\Miscelleneous.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dgautoComments.designer.vb">
+      <DependentUpon>dgautoComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgautoComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsSchoolParameters.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSchoolParameters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSchoolParameters.vb">
+      <DependentUpon>dsSchoolParameters.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExamGrading.vb" />
+    <Compile Include="frmSchoolParameters.designer.vb">
+      <DependentUpon>frmSchoolParameters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchoolParameters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="dsSchoolParameters.xsc">
+      <DependentUpon>dsSchoolParameters.xsd</DependentUpon>
+    </None>
+    <None Include="dsSchoolParameters.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSchoolParameters.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsSchoolParameters.xss">
+      <DependentUpon>dsSchoolParameters.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\clsUser.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dgautoComments.resx">
+      <DependentUpon>dgautoComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSchoolParameters.resx">
+      <DependentUpon>frmSchoolParameters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\rptStudSlip.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Left 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow Right 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Businessman 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confirm.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder Blue Arrow Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green Tick 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Info 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License Agreement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Light Bulb 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Links 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Links 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sms.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trust2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tutorials.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tutorials1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload - Transfer Photos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

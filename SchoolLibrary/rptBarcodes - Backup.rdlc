@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="Barcode">
+      <rd:DataSourceID>ee4316b3-76d9-4a66-9472-14d9d1abd178</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=(local);Initial Catalog=barcodes;User ID=sa;Password=botai</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="soccerConnectionString">
+      <rd:DataSourceID>4fbda2a8-1659-4b16-b2f3-54bc74bd17bd</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=(local);Initial Catalog=GEVSTEIN;User ID=sa;Password=botai</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>4190392d-2c4c-45c8-b6e2-129a08310ebb</rd:ReportID>
+  <DataSets>
+    <DataSet Name="barcodesDataSet_Barcodes">
+      <Fields>
+        <Field Name="Img">
+          <DataField>Img</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="Data">
+          <DataField>Data</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="raw">
+          <DataField>raw</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>soccerConnectionString</DataSourceName>
+        <CommandText>SELECT        Img, Data, raw
+FROM            Barcodes</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>barcodesDataSet</rd:DataSetName>
+        <rd:TableName>Barcodes</rd:TableName>
+        <rd:TableAdapterName>BarcodesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>2.125in</Width>
+  <Body>
+    <ColumnSpacing>0.1cm</ColumnSpacing>
+    <ReportItems>
+      <List Name="list1">
+        <Left>0.125in</Left>
+        <ReportItems>
+          <Image Name="image1">
+            <Sizing>FitProportional</Sizing>
+            <Top>0.125in</Top>
+            <MIMEType>image/jpeg</MIMEType>
+            <Source>Database</Source>
+            <Style />
+            <Left>0.125in</Left>
+            <Height>0.75in</Height>
+            <Value>=Fields!Img.Value</Value>
+          </Image>
+        </ReportItems>
+        <Top>0.125in</Top>
+        <Width>1.875in</Width>
+        <Height>1in</Height>
+      </List>
+    </ReportItems>
+    <Height>1.375in</Height>
+    <Columns>3</Columns>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

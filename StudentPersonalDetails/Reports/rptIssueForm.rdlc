@@ -1,0 +1,656 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>8.05208in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>3.31636in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle1">
+                      <ReportItems>
+                        <Textbox Name="issueno">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>= "ISSUE NUMBER : " &amp; Fields!issuecode.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>issueno</rd:DefaultName>
+                          <Top>0.39417cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>0.68571cm</Height>
+                          <Width>18.77271cm</Width>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="issueno2">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>= "Book: " &amp; Fields!book.Value &amp; "-" &amp; fields!title.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>issueno</rd:DefaultName>
+                          <Top>1.221cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>0.68571cm</Height>
+                          <Width>18.77271cm</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="borrower">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Borrower : " &amp; Fields!StudName.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>12pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>borrower</rd:DefaultName>
+                          <Top>2.08309cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>0.60952cm</Height>
+                          <Width>18.77271cm</Width>
+                          <ZIndex>2</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Tablix Name="table1">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>6.34563cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>6.14958cm</Width>
+                              </TablixColumn>
+                              <TablixColumn>
+                                <Width>6.54208cm</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>0.55873cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox3">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>DateIssued</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <Color>White</Color>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox3</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Black</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="textbox4">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>DueDate</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <Color>White</Color>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>textbox4</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Black</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox7">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>ReturnDate</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                  <FontSize>11pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                  <Color>White</Color>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox7</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <BackgroundColor>Black</BackgroundColor>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                              <TablixRow>
+                                <Height>0.53333cm</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="dateissued">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=FormatDateTime(Fields!dateissued.Value,1)</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <FontFamily />
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>dateissued</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="duedate">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=FormatDateTime(Fields!duedate.Value,1)</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <FontFamily />
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>duedate</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Textbox Name="Textbox8">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=switch(Fields!returnstate.Value = "True",formatdatetime(Fields!datereturned.Value,1),Fields!returnstate.Value = "False","Pending")</Value>
+                                                <Style>
+                                                  <FontFamily>Tahoma</FontFamily>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style>
+                                              <TextAlign>Left</TextAlign>
+                                            </Style>
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox8</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>DimGray</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                              <TablixMember />
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <KeepWithGroup>After</KeepWithGroup>
+                                <RepeatOnNewPage>true</RepeatOnNewPage>
+                                <KeepTogether>true</KeepTogether>
+                              </TablixMember>
+                              <TablixMember>
+                                <Group Name="table1_Details_Group">
+                                  <GroupExpressions>
+                                    <GroupExpression>=Fields!book.Value</GroupExpression>
+                                  </GroupExpressions>
+                                  <DataElementName>Detail</DataElementName>
+                                </Group>
+                                <TablixMembers>
+                                  <TablixMember />
+                                </TablixMembers>
+                                <DataElementName>Detail_Collection</DataElementName>
+                                <DataElementOutput>Output</DataElementOutput>
+                                <KeepTogether>true</KeepTogether>
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <DataSetName>DataSet1</DataSetName>
+                          <Top>3.0013cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>1.09206cm</Height>
+                          <Width>19.03729cm</Width>
+                          <ZIndex>3</ZIndex>
+                          <Style />
+                        </Tablix>
+                        <Textbox Name="textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Issued  By : "  &amp; fields!issuer.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>textbox5</rd:DefaultName>
+                          <Top>4.23447cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>0.63492cm</Height>
+                          <Width>11.75cm</Width>
+                          <ZIndex>4</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Textbox Name="textbox6">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>="Printed  By : "  &amp; fields!LoggedUser.Value &amp; " On  " &amp; FormatDateTime(now.date , 0)</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Top>4.93994cm</Top>
+                          <Left>0.22438cm</Left>
+                          <Height>0.63492cm</Height>
+                          <Width>15.75cm</Width>
+                          <ZIndex>5</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Image Name="image1">
+                          <Source>Database</Source>
+                          <Value>=Fields!barcode.Value</Value>
+                          <MIMEType>image/gif</MIMEType>
+                          <Top>2.26427in</Top>
+                          <Left>2.9375in</Left>
+                          <Height>0.97917in</Height>
+                          <Width>2.17708in</Width>
+                          <ZIndex>6</ZIndex>
+                          <Style />
+                        </Image>
+                      </ReportItems>
+                      <PageBreak>
+                        <BreakLocation>End</BreakLocation>
+                      </PageBreak>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Details">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!book.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.0542in</Top>
+        <Left>0.14458in</Left>
+        <Height>3.31636in</Height>
+        <Width>8.05208in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>8.9138cm</Height>
+    <Style />
+  </Body>
+  <Width>21.06917cm</Width>
+  <Page>
+    <PageHeader>
+      <Height>1.04977cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="textbox1">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>LIBRARY ISSUE FORM</Value>
+                  <Style>
+                    <FontFamily>Tahoma</FontFamily>
+                    <FontSize>18pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>textbox1</rd:DefaultName>
+          <Left>3.75cm</Left>
+          <Height>0.8381cm</Height>
+          <Width>12.69841cm</Width>
+          <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style />
+    </PageHeader>
+    <LeftMargin>1mm</LeftMargin>
+    <RightMargin>1mm</RightMargin>
+    <TopMargin>1mm</TopMargin>
+    <BottomMargin>1mm</BottomMargin>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="dsSchool">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>85cef5f7-ca24-406d-8192-44d4450a4194</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>dsSchool</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="borrower">
+          <DataField>borrower</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="dateissued">
+          <DataField>dateissued</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="issueno">
+          <DataField>issueno</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="issuestate">
+          <DataField>issuestate</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="duedate">
+          <DataField>duedate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="issuer">
+          <DataField>issuer</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="book">
+          <DataField>book</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudName">
+          <DataField>StudName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="title">
+          <DataField>title</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Loan">
+          <DataField>Loan</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LoggedUser">
+          <DataField>LoggedUser</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="barcode">
+          <DataField>barcode</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="issuecode">
+          <DataField>issuecode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="datereturned">
+          <DataField>datereturned</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="returnstate">
+          <DataField>returnstate</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsSchool</rd:DataSetName>
+        <rd:SchemaPath>F:\Development\StandardDesktop_vs2017_Dev\StudentPersonalDetails\dsSchool.xsd</rd:SchemaPath>
+        <rd:TableName>BookIssueForm</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>BookIssueFormTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="rydingslibrary">
+      <MIMEType>image/gif</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>d27365a6-3d39-47c2-a8dd-f85977a05ca0</rd:ReportID>
+</Report>

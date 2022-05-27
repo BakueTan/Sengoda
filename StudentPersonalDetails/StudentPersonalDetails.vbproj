@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DAE3A22-6567-4844-BEE1-30605AF4D9D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StudentDetails</RootNamespace>
+    <AssemblyName>StudentPersonalDetails</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StudentPersonalDetails.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StudentPersonalDetails.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Miscelleneous">
+      <HintPath>..\Miscelleneous\bin\Debug\Miscelleneous.dll</HintPath>
+    </Reference>
+    <Reference Include="SecuGen.FDxSDKPro.Windows">
+      <HintPath>..\SystemAdministration\bin\Debug\SecuGen.FDxSDKPro.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.vb" />
+    <Compile Include="clsSchoolParameters.vb" />
+    <Compile Include="clsStudent.vb" />
+    <Compile Include="csSiblings.vb" />
+    <Compile Include="DbTablesClass.vb" />
+    <Compile Include="dgFormTeacher.Designer.vb">
+      <DependentUpon>dgFormTeacher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgFormTeacher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DgHead.designer.vb">
+      <DependentUpon>DgHead.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DgHead.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dgLeavingStudent.Designer.vb">
+      <DependentUpon>dgLeavingStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgLeavingStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dgPeriod.Designer.vb">
+      <DependentUpon>dgPeriod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgPeriod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dgSubjectComment.Designer.vb">
+      <DependentUpon>dgSubjectComment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="dgSubjectComment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dsSchool.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsSchool.vb">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassUpload.Designer.vb">
+      <DependentUpon>frmClassUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEnrollment.Designer.vb">
+      <DependentUpon>frmEditEnrollment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditEnrollment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditMarks.designer.vb">
+      <DependentUpon>frmEditMarks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditMarks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInvUpload.Designer.vb">
+      <DependentUpon>frmInvUpload.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInvUpload.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNonStud.Designer.vb">
+      <DependentUpon>frmNonStud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNonStud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecup_2.Designer.vb">
+      <DependentUpon>frmRecup_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecup_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPreview.designer.vb">
+      <DependentUpon>frmReportPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudBalances.Designer.vb">
+      <DependentUpon>frmStudBalances.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudBalances.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentProfile.designer.vb">
+      <DependentUpon>frmStudentProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DgBoardingMaster.Designer.vb">
+      <DependentUpon>DgBoardingMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DgBoardingMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDetails.Designer.vb">
+      <DependentUpon>StudentDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentRegister.Designer.vb">
+      <DependentUpon>StudentRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StudentRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudNok.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dgFormTeacher.resx">
+      <DependentUpon>dgFormTeacher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DgHead.resx">
+      <DependentUpon>DgHead.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dgLeavingStudent.resx">
+      <DependentUpon>dgLeavingStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dgPeriod.resx">
+      <DependentUpon>dgPeriod.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dgSubjectComment.resx">
+      <DependentUpon>dgSubjectComment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassUpload.resx">
+      <DependentUpon>frmClassUpload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditEnrollment.resx">
+      <DependentUpon>frmEditEnrollment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditMarks.resx">
+      <DependentUpon>frmEditMarks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInvUpload.resx">
+      <DependentUpon>frmInvUpload.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNonStud.resx">
+      <DependentUpon>frmNonStud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecup_2.resx">
+      <DependentUpon>frmRecup_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPreview.resx">
+      <DependentUpon>frmReportPreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudBalances.resx">
+      <DependentUpon>frmStudBalances.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentProfile.resx">
+      <DependentUpon>frmStudentProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DgBoardingMaster.resx">
+      <DependentUpon>DgBoardingMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptExamSubjectAnalysis.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptHsReport_Sengoda.rdlc" />
+    <EmbeddedResource Include="Reports\rptHsReport_Sengoda_Alevel.rdlc" />
+    <EmbeddedResource Include="Reports\rptStudBehaviorPerTerm.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptStudBehaviorSpecific.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptFeesInvoice.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptFeesReceipt.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptHsReport_Head.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptIssueForm.rdlc" />
+    <EmbeddedResource Include="Reports\rptReturnForm.rdlc" />
+    <EmbeddedResource Include="Reports\rptStudentClasses.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptStudFeesStatement.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentDetails.resx">
+      <DependentUpon>StudentDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentRegister.resx">
+      <DependentUpon>StudentRegister.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="dsSchool.xsc">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="dsSchool.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSchool.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsSchool.xss">
+      <DependentUpon>dsSchool.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+    <Content Include="edit.jpg" />
+    <None Include="Resources\Businessman 1.png" />
+    <None Include="Resources\AddNew.png" />
+    <None Include="Resources\noImage.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
